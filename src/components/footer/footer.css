@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; 
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer-column {
+    flex: 1;
+    list-style-type: none;
+  }
+  .list-style {
+    list-style-type: none;
+  }
+  
+  

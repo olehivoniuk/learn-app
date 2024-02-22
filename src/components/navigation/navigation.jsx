@@ -1,9 +1,17 @@
+
+import Group1 from '../../images/Group1.jpg';
 import './navigation.css'
+
 const Navigation = () => {
   return (
-    <div>
-      
-    </div>
+    <nav className="nav ">
+
+      <div>
+      <img src={Group1} alt="Logo" />
+      </div>
+        
+         
+    </nav>
   )
 }
 
