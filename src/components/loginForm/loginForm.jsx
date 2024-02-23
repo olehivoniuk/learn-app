@@ -4,17 +4,16 @@ import './loginForm.css'
 const LoginForm = () => {
   return (
     <div className="center">
-       
       <form className="login-form">
-      <h1>Sign in</h1>
-        <h2>Welcome back</h2>
-        <div>
+        <h1> Sign in </h1>
+        <h3> Welcome back </h3>
+        <div className="form-group">
           <label htmlFor="username">Username:</label>
-          <input type="text" id="username" name="username" required />
+          <input type="text" id="username" name="username" placeholder='Enter email' required />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" required />
+          <input type="password" id="password" name="password" placeholder='Enter password' required />
         </div>
         <button type="submit">Sign in</button>
         <p>Don't have an account? <a href="#">Sign up</a></p>

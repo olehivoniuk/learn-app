@@ -11,3 +11,16 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+  
+  .form-group {
+    margin-bottom: 15px; /* Add margin between form groups */
+  }
+  
+  .form-group label {
+    display: block; /* Make labels block-level elements */
+    margin-bottom: 5px; /* Add margin below labels */
+  }
+
+  h1, h3 {
+      text-align: center;
+  }
