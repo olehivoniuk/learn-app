@@ -1,26 +1,49 @@
 .footer {
     display: flex;
-    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #f8f9fa; 
     color: #333;
-    padding: 20px 0;
+    padding: 40px; /* Add padding to all sides */
     text-align: center;
-  }
-  
-  .footer-columns {
+    flex-direction: column; /* Set flex-direction to column to stack items vertically */
+}
+
+.footer hr {
+    margin: 10px; /* Add margin to the hr element */
+}
+
+.footer-columns {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
-  
-  .footer-column {
+}
+
+.footer-column {
     flex: 1;
     list-style-type: none;
-  }
-  .list-style {
+}
+
+.list-style {
     list-style-type: none;
-  }
-  
-  
+}
+
+.footer-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; /* Add margin to separate from the previous content */
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center; /* Center-align the content within each column */
+}
+
+.footer-column:first-child {
+    text-align: left; /* Align the first column (language select) to the left */
+}
+
+.footer-column:last-child {
+    text-align: right; /* Align the last column (logos) to the right */
+}
