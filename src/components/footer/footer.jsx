@@ -1,9 +1,16 @@
 import Group1 from '../../images/Group1.jpg';
+import Facebook from '../../images/Facebook.svg'
+import Youtube from '../../images/Youtube.svg'
+import Twitter from '../../images/Twitter.svg'
 import './footer.css';
 
 const Footer = () => {
   return (
-    <div>
+
+    
+
+
+    <div className="footer-container">
       <footer className="footer">
         <div className="footer-columns">
           <div className="footer-column">
@@ -46,12 +53,12 @@ const Footer = () => {
             </select>
           </div>
           <div className="footer-column">
-            &#169; Company Name
+            &#169; Learn, Inc.  &#8226;  Privacy &#8226;  Terms
           </div>
           <div className="footer-column">
-            <img src="logo1.jpg" alt="Logo 1" />
-            <img src="logo2.jpg" alt="Logo 2" />
-            <img src="logo3.jpg" alt="Logo 3" />
+            <img src={Facebook} alt="Facebook logo" className='social-media' />
+            <img src={Twitter} alt="Twitter logo" className='social-media' />
+            <img src={Youtube} alt="Youtube logo"  className='social-media'/>
           </div>
         </div>
       </footer>
