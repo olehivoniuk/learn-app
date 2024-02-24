@@ -9,9 +9,9 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      {/* <Navigation />
       <LoginForm/>
-      <Footer />
+      <Footer /> */}
 
       <Home/>
     </div>

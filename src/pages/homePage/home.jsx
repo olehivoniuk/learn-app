@@ -18,13 +18,17 @@ const Home = () => {
         </h3>
         </div>
 
-        <img src= {Rectangle1} alt="video introduction of the content " />
+        <img src= {Rectangle1} alt="video introduction of the content" class="center-image" />
         
-        <div>
-            <h1>Join us</h1>
+        <div class="home-container">
+            <div className="dots-container"></div>
+    <h1>Join us</h1>
+    <h4>Qui ut exercitation officia proidend enim non tempor tempor ipsum ex nulla ea adipisicing sit consequat enim elit  cupidatat o</h4>
+
+            <div className="oval">
             </div>
             <div>
-            <h4>Qui ut exercitation officia proidend enim non tempor tempor ipsum ex nulla ea adipisicing sit consequat enim elit  cupidatat o</h4>
+            </div>
             </div>
 
         <Footer />
