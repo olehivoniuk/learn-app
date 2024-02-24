@@ -10,6 +10,7 @@
     color : black;
     border: 1px solid #BCB1F2; /* Added border style: 1px solid */
     margin-top: 0; 
+    margin-bottom: 140px;
 }
 
 .nav-item {
