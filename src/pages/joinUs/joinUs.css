@@ -1,0 +1,23 @@
+.joinUs-container {
+    text-align: center;
+  }
+  
+  .joinUs-heading {
+    margin-bottom: 20px;
+  }
+  
+  .registration-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* Add border */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  .text-container {
+    margin-right: 20px;
+  }
+  
+  .trainer-image {
+    max-width: 100%;
+  }
+  
