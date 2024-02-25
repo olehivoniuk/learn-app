@@ -1,6 +1,7 @@
 import Navigation from '../../components/navigation/navigation'
 import Footer from '../../components/footer/footer'
 import Rectangle1 from '../../images/Rectangle1.png'
+import JoinUsBox from '../../components/joinUsBox/joinUsBox'
 
 import './homePage.css'
 
@@ -18,13 +19,7 @@ const Home = () => {
   
           <img src={Rectangle1} alt="video introduction of the content" class="center-image" />
   
-          <div className="home-container">
-              <div className="dots-container"></div>
-              <h1>Join us</h1>
-              <h4>Qui ut exercitation officia proidend enim non tempor tempor ipsum ex nulla ea adipisicing sit consequat enim elit cupidatat o</h4>
-  
-              <div className="oval"></div>
-          </div>
+          <JoinUsBox />
           <Footer />
       </div>
     )

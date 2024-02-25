@@ -1,0 +1,94 @@
+.home-container {
+    position: relative; /* Change position to relative */
+    width: 100%; /* Take up full width of the content area */
+    height: 18vh;
+    max-width: 100vh; /* Limit maximum width */
+    margin: 0 auto; /* Center horizontally */
+    background: #FAFAFBFF;
+    border-radius: 6px;
+    padding-left: 295px; /* Add padding to accommodate the circle */
+    padding-top: 25vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+/* Oval 1 */
+.oval {
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Adjusted to left */
+    width: 20vh; /* Adjust width and height as needed */
+    height: 20vh; /* Adjust width and height as needed */
+    background-color: #000; /* Adjust background color as needed */
+    border-radius: 0 100% 0 0; /* This will make only the top right quarter visible */
+    overflow: hidden;
+  }
+
+  .dots-container {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 350px); /* Move it 80px to the left */
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 13%;
+    height: 100px;
+    text-align: center;
+    line-height: 18px;
+    text-align: left;
+}
+
+/* CSS for dots */
+.dots-container::before {
+    content: "• • • • • • • • • • • • • • • • • • • • • • • • • • • •";
+    font-size: 5px;
+    color: #000;
+    letter-spacing: 8px; /* Adjust spacing between dots */
+}
+
+.dots-container-second {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px; /* Adjust width to fit content */
+    height: auto; /* Adjust height to fit content */
+    text-align: right; /* Align dots to the right */
+}
+
+.dots-container-second::before {
+    content: "• • • • • • • • • • • • ";
+    font-size: 12px; /* Increase font size for larger dots */
+    color: #000;
+    line-height: 3.5vh;
+    letter-spacing: 12px; /* Adjust spacing between dots */
+}
+
+
+
+
+.join-us-heading {
+    padding-top: 10vh;
+}
+
+.oval-diagonal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15vh; /* Adjust width and height as needed */
+    height: 15vh; /* Adjust width and height as needed */
+    background-color: #000; /* Adjust background color as needed */
+    border-radius: 100% 0 0 0; /* This will make only the top left quarter visible */
+    overflow: hidden;
+    transform: rotate(270deg); /* Rotate the oval by 90 degrees */
+  }
+
+  .small-oval {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13.5vh; /* Adjust width and height as needed */
+    height: 13.5vh; /* Adjust width and height as needed */
+    background: #FAFAFBFF;
+    border-radius: 100% 0 0 0; /* This will make only the top left quarter visible */
+    overflow: hidden;
+    transform: rotate(270deg); /* Rotate the oval by 90 degrees */
+}
