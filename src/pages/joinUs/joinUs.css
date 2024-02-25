@@ -26,6 +26,7 @@
     justify-content: center; /* Center items horizontally */
     margin-bottom: 20px; /* Add margin between containers */
     background-color: #FAFAFBFF;
+    border-radius: 12px
   }
   
   .text-container {

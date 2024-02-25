@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+}
+
+.image-container {
+  margin-right: 3vh;
+  background-color: #FAFAFBFF;
+  margin: 4vh;
+}
+
+.team-cherry-deck {
+    width: 150vh; /* Make the image take the full width of its parent container */
+    height: 100%; /* Make the image take the full height of its parent container */
+    object-fit: cover;
+    background-color: white; /* Ensure the image covers the entire container */
+  }
+
+  .student-image {
+      margin-right: 35px;
+  }
+
+  .team-container {
+      max-width: 20vh;
+  }
+
+  .title-description {
+      max-width: 15vh;
+  }
+
+
+  
+  .about-description {
+    text-align: center;
+    margin-right: 20vh;
+    margin-left: 20vh;
+  }
+
+  .about-us-heading {
+      margin-top: 15vh;
+  }
