@@ -5,7 +5,7 @@ const LoginForm = () => {
   return (
     <div className="center">
       <form className="login-form">
-        <h1> Sign in </h1>
+        <h1 className='sign-in-heading'> Sign in </h1>
         <h3> Welcome back </h3>
         <div className="form-group">
           <label htmlFor="username">Username:</label>

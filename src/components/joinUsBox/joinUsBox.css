@@ -10,7 +10,6 @@
     margin: 0 auto; /* Center horizontally */
     background: #FAFAFBFF;
     border-radius: 6px;
-    /* padding-left: 295px; */ /* Remove this line */
     padding-top: 25vh;
     margin-top: 3vh;
     margin-bottom: 3vh;
@@ -65,9 +64,6 @@
     line-height: 3.5vh;
     letter-spacing: 12px; /* Adjust spacing between dots */
 }
-
-
-
 
 .join-us-heading {
     padding-top: 10vh;
