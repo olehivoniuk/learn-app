@@ -7,7 +7,9 @@ import Student from '../../images/Student.png'
 
 const JoinUs = () => {
     return (
-      <div className="joinUs-container">
+
+        <div className="container">
+ <div className="joinUs-container">
         <h1 className='joinUs-heading'>Join us</h1>
         <div className="registration-container">
           {/* Trainer Registration */}
@@ -30,6 +32,8 @@ const JoinUs = () => {
           <img src={Student} alt="Student" className="student-image" />
         </div>
       </div>
+</div>
+      
     );
   }
   

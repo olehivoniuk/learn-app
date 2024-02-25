@@ -1,23 +1,42 @@
-.joinUs-container {
-    text-align: center;
+.container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: auto; /* Adjust as needed */
+  }
+  
+  .joinUs-container {
+    max-width: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
   }
   
   .joinUs-heading {
-    margin-bottom: 20px;
+      margin-top: 12vh;
+      font-size: 56px; 
+      font-weight: 700; 
+      line-height: 78px; 
+      color: #171A1FFF;
   }
   
   .registration-container {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc; /* Add border */
-    padding: 20px; /* Add padding for spacing */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Add margin between containers */
+    background-color: #FAFAFBFF;
   }
   
   .text-container {
     margin-right: 20px;
+    padding: 5vh;
   }
   
-  .trainer-image {
+  .trainer-image,
+  .student-image {
     max-width: 100%;
+    height: auto; /* Adjusts height based on width */
+    margin: 0;
   }
   
