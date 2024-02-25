@@ -1,12 +1,16 @@
 .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center;
     position: relative; /* Change position to relative */
     width: 100%; /* Take up full width of the content area */
     height: 18vh;
-    max-width: 100vh; /* Limit maximum width */
+    max-width: 120vh; /* Limit maximum width */
     margin: 0 auto; /* Center horizontally */
     background: #FAFAFBFF;
     border-radius: 6px;
-    padding-left: 295px; /* Add padding to accommodate the circle */
+    /* padding-left: 295px; */ /* Remove this line */
     padding-top: 25vh;
     margin-top: 3vh;
     margin-bottom: 3vh;
