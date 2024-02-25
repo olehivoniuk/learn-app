@@ -1,0 +1,45 @@
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .blog-block {
+    flex: 0 0 calc(33.333% - 5vh);
+    margin: 5px; /* Reduce margin */
+    text-align: center; /* Center align content */
+  }
+  
+  .blog-image {
+    width: 100%; /* Make sure images take full width of their container */
+    max-width: 80%; /* Ensure images don't exceed their original width */
+  }
+  
+  .blog-description {
+    margin-top: 10px; /* Add margin between image and description */
+  }
+  
+  .blog-button {
+    margin: 20px auto; /* Center align the button */
+    display: block; /* Ensure the button takes full width */
+    padding: 0 16px; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: Poppins; 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 26px; 
+    color: #FFFFFFFF; /* white */
+    background: #6355D8FF; /* primary-500 */
+    opacity: 1; 
+    border: none; 
+    border-radius: 6px;
+  }
+
+  .blog-heading {
+      margin-top: 11vh;
+      font-size: 56px; 
+      font-weight: 700; 
+      line-height: 78px; 
+      color: #171A1FFF; 
+  }
+  
