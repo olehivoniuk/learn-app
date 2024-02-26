@@ -9,6 +9,7 @@ import Blog from './pages/blog/blog';
 import JoinUsTrainer from './pages/joinUsTrainer/joinUsTrainer';
 import JoinUsTrainerValidation from './pages/joinUsTrainerValidation/joinUsTrainerValidation';
 import JoinUsStudent from './pages/joinUsStudent/joinUsStudent';
+import StudentLogInHome from './pages/studentLogInHome/studentLogInHome';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -23,8 +24,8 @@ function App() {
       {/* <LoginForm/> */}
       {/* <JoinUsTrainer /> */}
       {/* <JoinUsTrainerValidation /> */}
-     <JoinUsStudent />
-
+     {/* <JoinUsStudent /> */}
+     <StudentLogInHome />
      {/* <JoinUs /> */}
      {/* <AboutUs /> */}
 

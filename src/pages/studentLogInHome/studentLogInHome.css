@@ -1,0 +1,8 @@
+.student-log-in-home-heading {
+    margin-top: 20vh;
+}
+
+.justify-content-center{
+    display: flex;
+    justify-content: space-between;
+}
