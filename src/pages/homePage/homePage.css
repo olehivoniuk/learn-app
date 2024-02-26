@@ -7,7 +7,7 @@ body {
 }
 
 .content {
-    flex: 1; /* Take up remaining vertical space */
+    flex: 1; 
 }
 
 h1 {
@@ -25,10 +25,17 @@ h4 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; /* Center text horizontally */
+    margin-top: 20vh;
 }
 
 .home-heading-one {
     margin-top: 15vh;
+}
+.home-heading-two {
+    margin-top: 20vh;
+    margin-left: 14vh;
+    max-width: 80%;
+    text-align: center;
 }
 
 .center-image {

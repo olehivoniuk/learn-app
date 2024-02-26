@@ -22,12 +22,13 @@ function App() {
       {/* <JoinUsTrainer /> */}
 
      {/* <JoinUs /> */}
-     <AboutUs />
+     {/* <AboutUs /> */}
 
       {/* <Blog /> */}
+      <Home/>
       <Footer />
 
-      {/* <Home/> */}
+    
     </div>
   );
 }

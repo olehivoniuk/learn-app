@@ -1,13 +1,13 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center; 
     justify-content: center;
-    position: relative; /* Change position to relative */
-    width: 100%; /* Take up full width of the content area */
-    height: 18vh;
-    max-width: 120vh; /* Limit maximum width */
-    margin: 0 auto; /* Center horizontally */
+    position: relative; 
+    width: 100%; 
+    height: 35vh;
+    max-width: 120vh; 
+    margin: 0 auto; 
     background: #FAFAFBFF;
     border-radius: 6px;
     padding-top: 25vh;
@@ -15,7 +15,7 @@
     margin-bottom: 3vh;
 }
 
-/* Oval 1 */
+
 .oval {
     position: absolute;
     bottom: 0;
@@ -30,17 +30,17 @@
   .dots-container {
     position: absolute;
     top: 0;
-    left: calc(50% - 350px); /* Move it 80px to the left */
+    left: calc(50% - 300px); /* Move it 80px to the left */
     transform: translateX(-50%);
     z-index: 1;
-    width: 13%;
+    width: 16%;
     height: 100px;
     text-align: center;
     line-height: 18px;
     text-align: left;
 }
 
-/* CSS for dots */
+
 .dots-container::before {
     content: "• • • • • • • • • • • • • • • • • • • • • • • • • • • •";
     font-size: 5px;
@@ -66,7 +66,7 @@
 }
 
 .join-us-heading {
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 
 .oval-diagonal {
