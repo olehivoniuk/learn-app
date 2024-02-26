@@ -6,10 +6,6 @@ import './footer.css';
 
 const Footer = () => {
   return (
-
-    
-
-
     <div className="footer-container">
       <footer className="footer">
         <div className="footer-columns">
@@ -40,9 +36,14 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Subscribe to Our Newsletter</h3>
             <ul className='list-style'>
-              <li>for product announcements and exclusive insights</li>
-              <li><input placeholder='Input your email'/></li>
-            </ul>
+               <li>for product announcements and exclusive insights</li>
+               <li>
+                 <div className="input-group mb-3">
+                   <input type="text" className="form-control" placeholder="Input your email" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                   <button className="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+                 </div>
+               </li>
+             </ul>             
           </div>
         </div>
         <hr />
