@@ -19,19 +19,19 @@ const JoinUsTrainer = () => {
           <form>
             <div className="mb-3">
               <label htmlFor="inputFirstName" className="form-label">First name</label>
-              <input type="text" className="form-control" id="inputFirstName" aria-describedby="firstNameHelp" placeholder='Text...'/>
+              <input type="text" className="form-control" id="inputFirstName" aria-describedby="firstNameHelp" placeholder='Text...' required/>
             </div>
             <div className="mb-3">
               <label htmlFor="inputLastName" className="form-label">Last name</label>
-              <input type="text" className="form-control" id="inputLastName" aria-describedby="lastNameHelp"  placeholder='Input text'/>
+              <input type="text" className="form-control" id="inputLastName" aria-describedby="lastNameHelp"  placeholder='Input text' required/>
             </div>
             <div className="mb-3">
               <label htmlFor="inputEmail" className="form-label">Email</label>
-              <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder='Input text'/>
+              <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder='Input text' required/>
             </div>
             <div className="mb-3">
               <label htmlFor="inputSpecialization" className="form-label">Specialization</label>
-              <select id="inputSpecialization" className="form-select" aria-label="Default select example">
+              <select id="inputSpecialization" className="form-select" aria-label="Default select example" required>
                 <option defaultValue disabled>Please select</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>

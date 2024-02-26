@@ -39,7 +39,7 @@ const Footer = () => {
                <li>for product announcements and exclusive insights</li>
                <li>
                  <div className="input-group mb-3">
-                   <input type="text" className="form-control" placeholder="Input your email" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                   <input type="text" className="form-control" placeholder="Input your emai" aria-label="Recipient's username" aria-describedby="button-addon2" />
                    <button className="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
                  </div>
                </li>

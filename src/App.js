@@ -7,6 +7,7 @@ import JoinUs from './pages/joinUs/joinUs';
 import AboutUs from './pages/aboutUs/aboutUs';
 import Blog from './pages/blog/blog';
 import JoinUsTrainer from './pages/joinUsTrainer/joinUsTrainer';
+import JoinUsTrainerValidation from './pages/joinUsTrainerValidation/joinUsTrainerValidation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,12 +21,13 @@ function App() {
       <Navigation />
       {/* <LoginForm/> */}
       {/* <JoinUsTrainer /> */}
+      <JoinUsTrainerValidation />
 
      {/* <JoinUs /> */}
      {/* <AboutUs /> */}
 
       {/* <Blog /> */}
-      <Home/>
+      {/* <Home/> */}
       <Footer />
 
     
