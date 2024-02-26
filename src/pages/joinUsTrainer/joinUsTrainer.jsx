@@ -10,7 +10,7 @@ const JoinUsTrainer = () => {
           <h2>Registration</h2>
         </div>
         <div className=" move-right  mb-1">
-          <p>Registration</p>
+          <p>Trainer</p>
         </div>
         <div className="col-md-6">
           <img src={TrainerReg} alt="Trainer Registration" className="img-fluid" />
