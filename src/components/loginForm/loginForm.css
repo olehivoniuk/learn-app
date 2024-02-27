@@ -1,14 +1,7 @@
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of the viewport */
+.sign-in-heading{
+    margin-top: 20vh;
 }
 
-.footer-column.social-media {
-    text-align: center; /* Center the content horizontally */
-}
-
-.footer-column.social-media img {
-    margin: 0 5px; /* Add margin between the icons */
+.login-form {
+    padding: 20vh;
 }
