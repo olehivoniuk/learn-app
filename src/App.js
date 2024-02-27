@@ -10,6 +10,7 @@ import JoinUsTrainer from './pages/joinUsTrainer/joinUsTrainer';
 import JoinUsTrainerValidation from './pages/joinUsTrainerValidation/joinUsTrainerValidation';
 import JoinUsStudent from './pages/joinUsStudent/joinUsStudent';
 import StudentLogInHome from './pages/studentLogInHome/studentLogInHome';
+import MyAccountStudent from './pages/myAccount/myAccoutStudent/myAccountStudent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -25,10 +26,10 @@ function App() {
       {/* <JoinUsTrainer /> */}
       {/* <JoinUsTrainerValidation /> */}
      {/* <JoinUsStudent /> */}
-     <StudentLogInHome />
+     {/* <StudentLogInHome /> */}
      {/* <JoinUs /> */}
      {/* <AboutUs /> */}
-
+      <MyAccountStudent />
       {/* <Blog /> */}
       {/* <Home/> */}
       <Footer />

@@ -45,12 +45,12 @@ const StudentLogInHome = () => {
           </div>
         </div>
       </div>
-      {/* Wrap the button inside a div with Bootstrap utility classes */}
       <div className="row justify-content-center">
         <div className="col-md-4 text-center">
-          <button className="btn btn-primary mb-4" type="submit">Button</button>
+          <button className="btn btn-primary mb-5 mt-5" type="submit">Read more articles</button>
         </div>
       </div>
+      
     </div>
   );
 }
