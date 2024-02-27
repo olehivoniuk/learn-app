@@ -5,12 +5,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 60px; /* Set a fixed height for the navigation */
     color : black;
     border: 1px solid #BCB1F2; /* Added border style: 1px solid */
     margin-top: 0; 
     margin-bottom: 140px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .nav-item {
