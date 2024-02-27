@@ -6,9 +6,10 @@ const AddAccountStudentAddTrainer = () => {
     <div className="container">
       <h1 className="text-center">Add Trainer</h1>
       <div className="row">
+      <p>Please select trainers for adding them to your trainers list. </p>
+              <p> -* There is no possibility to remove the trainer.</p>
         <div className="col-md-6">
-          <p>Please select trainers for adding them to your trainers list. </p>
-              <p> -* There is no possibility to remove the trainer.</p>            
+                      
           <h2 className="text-center">All Trainers</h2>
           <table className="table">
             <thead>
