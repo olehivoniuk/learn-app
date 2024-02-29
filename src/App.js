@@ -12,6 +12,9 @@ import JoinUsStudent from './pages/joinUsStudent/joinUsStudent';
 import StudentLogInHome from './pages/studentLogInHome/studentLogInHome';
 import MyAccountStudent from './pages/myAccount/myAccoutStudent/myAccountStudent';
 import AddAccountStudentAddTrainer from './pages/myAccount/myAccountStudentAddTrainer/addAccountStudentAddTrainer';
+import AddTodoForm from './addToDo/AddTodoForm';
+import EditMyStudentAccount from './pages/editMyStudentAccount/editMyStudentAccount';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -34,10 +37,16 @@ function App() {
     
       {/* <Blog /> */}
       {/* <Home/> */}
-    <AddAccountStudentAddTrainer/>
+    {/* <AddAccountStudentAddTrainer/> */}
+    {/* <AddTodoForm /> */}
+    <EditMyStudentAccount />
+
       <Footer />
 
+
     
+    
+
     </div>
   );
 }
