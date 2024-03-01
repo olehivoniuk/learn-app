@@ -4,7 +4,7 @@ import './addAccountStudentAddTrainer.css';
 const AddAccountStudentAddTrainer = () => {
   return (
     <div className="container">
-      <h1 className="text-center">Add Trainer</h1>
+      <h1 className="text-center add-trainer-heading">Add Trainer</h1>
       <div className="row">
       <p>Please select trainers for adding them to your trainers list. </p>
               <p> -* There is no possibility to remove the trainer.</p>
