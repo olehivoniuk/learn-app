@@ -15,6 +15,7 @@ import AddAccountStudentAddTrainer from './pages/myAccount/myAccountStudentAddTr
 import AddTodoForm from './addToDo/AddTodoForm';
 import EditMyStudentAccount from './pages/myAccount/editMyStudentAccount/editMyStudentAccount';
 import StudentTraining from './pages/training/studentTrainings/studentTraining';
+import AddTraining from './pages/training/addTrainings/addTraining';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -34,13 +35,14 @@ function App() {
      {/* <JoinUs /> */}
      {/* <AboutUs /> */}
      {/* <MyAccountStudent /> */}
-    
       {/* <Blog /> */}
       {/* <Home/> */}
     {/* <AddAccountStudentAddTrainer/> */}
     {/* <AddTodoForm /> */}
     {/* <EditMyStudentAccount /> */}
     <StudentTraining />
+
+    {/* <AddTraining /> */}
     
 
 
