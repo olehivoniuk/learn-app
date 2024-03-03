@@ -36,12 +36,12 @@ function App() {
      {/* <StudentLogInHome /> */}
      {/* <JoinUs /> */}
      {/* <AboutUs /> */}
-     {/* <MyAccountStudent /> */}
+     <MyAccountStudent />
       {/* <Blog /> */}
       {/* <Home/> */}
     {/* <AddAccountStudentAddTrainer/> */}
     {/* <AddTodoForm /> */}
-    <EditMyStudentAccount />
+    {/* <EditMyStudentAccount /> */}
     {/* <StudentTraining /> */}
 
     {/* <AddTraining /> */}
