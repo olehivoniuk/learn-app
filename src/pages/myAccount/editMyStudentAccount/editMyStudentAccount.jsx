@@ -1,7 +1,21 @@
+import { useState } from 'react';
+import Modal from '@mui/material/Modal';
+import Button from '@mui/material/Button';
 import AvatarStudent from '../../../images/AvatarStudent.png'
 import './editMyStudentAccount.css';
 
 const EditMyStudentAccount = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleClose = () => {
+    setModalOpen(false);
+  };
+
+  
   return (
     <div className='container-edit-my-student-account '>
       <h1 className='edit-my-student-account-heading'>My Account</h1>
@@ -23,7 +37,7 @@ const EditMyStudentAccount = () => {
                     <div>
                                     <p>Upload your photo</p>
                       <p>Your photo should be in PNG or JPG format</p>
-                      <button className="btn btn-primary me-2">Choose Image</button>
+                      <Button variant="contained" color="primary" onClick={handleOpen} className="btn btn-primary me-2">Choose Image</Button>
                       <button className="btn btn-danger">Remove</button>
                     </div>
                   </div>
@@ -70,6 +84,34 @@ const EditMyStudentAccount = () => {
           </div>
         </div>
       </div>
+      <Modal
+  open={modalOpen}
+  onClose={handleClose}
+  aria-labelledby="parent-modal-title"
+  aria-describedby="parent-modal-description"
+  sx={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+>
+  <div style={{ backgroundColor: 'white', padding: '5%', width: '80%', maxWidth: '70vh', maxHeight: '70vh' }}>
+    <h2 id="parent-modal-title" style={{ fontSize: '2em', marginBottom: '2vh' }}>Upload Files</h2>
+    <div style={{ border: '2px dashed grey', padding: '5%', textAlign: 'center', minHeight: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+      <div>
+        <img src="upload-icon.png" alt="Upload icon" style={{ width: '50%', height: 'auto', margin: 'auto' }} />
+      </div>
+      <div>Drop files here</div>
+      <div>PNG or JPG</div>
+      <div>or</div>
+      <div>Browse files</div>
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '3vh' }}>
+      <button style={{ marginRight: '2%', padding: '1% 2%', minWidth: '80px' }}>Cancel</button>
+      <button style={{ padding: '1% 2%', minWidth: '80px' }}>Upload</button>
+    </div>
+  </div>
+</Modal>
     </div>
   );
 }

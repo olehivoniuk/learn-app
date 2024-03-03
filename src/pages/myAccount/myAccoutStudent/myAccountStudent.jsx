@@ -5,7 +5,7 @@ import './myAccountStudent.css'
 const MyAccountStudent = () => {
     return (
       <div className="container mt-5">
-        <h1 className='my-account-heading'>My Account</h1>
+        <h1 className='my-account-heading '>My Account</h1>
         <div className="row mt-5">
           <div className="col-md-6">
             <h2>My Profile</h2>

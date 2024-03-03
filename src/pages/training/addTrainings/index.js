@@ -1,1 +1,1 @@
-export * from './addTrainings'
+export * from './addTraining'

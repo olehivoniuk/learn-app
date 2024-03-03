@@ -16,6 +16,7 @@ import AddTodoForm from './addToDo/AddTodoForm';
 import EditMyStudentAccount from './pages/myAccount/editMyStudentAccount/editMyStudentAccount';
 import StudentTraining from './pages/training/studentTrainings/studentTraining';
 import AddTraining from './pages/training/addTrainings/addTraining';
+import Box from './components/box/box';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -24,6 +25,7 @@ import './App.css'
 
 
 function App() {
+  
   return (
     <div className="App">
       <Navigation />
@@ -39,10 +41,11 @@ function App() {
       {/* <Home/> */}
     {/* <AddAccountStudentAddTrainer/> */}
     {/* <AddTodoForm /> */}
-    {/* <EditMyStudentAccount /> */}
-    <StudentTraining />
+    <EditMyStudentAccount />
+    {/* <StudentTraining /> */}
 
     {/* <AddTraining /> */}
+    {/* <Box/> */}
     
 
 
