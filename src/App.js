@@ -18,6 +18,8 @@ import StudentTraining from './pages/training/studentTrainings/studentTraining';
 import AddTraining from './pages/training/addTrainings/addTraining';
 import Box from './components/box/box';
 import ChangePassword from './pages/changePassword/changePassword';
+import ChangePasswordStatus from './pages/changePasswordStatus/changePasswordStatus';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css'
@@ -45,7 +47,8 @@ function App() {
 
     {/* <AddTraining /> */}
     {/* <Box/> */}
-    <ChangePassword/>
+    {/* <ChangePassword/> */}
+    <ChangePasswordStatus />
 
 
       <Footer />
