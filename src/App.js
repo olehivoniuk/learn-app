@@ -17,9 +17,8 @@ import EditMyStudentAccount from './pages/myAccount/editMyStudentAccount/editMyS
 import StudentTraining from './pages/training/studentTrainings/studentTraining';
 import AddTraining from './pages/training/addTrainings/addTraining';
 import Box from './components/box/box';
+import ChangePassword from './pages/changePassword/changePassword';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 import './App.css'
 
@@ -36,7 +35,7 @@ function App() {
      {/* <StudentLogInHome /> */}
      {/* <JoinUs /> */}
      {/* <AboutUs /> */}
-     <MyAccountStudent />
+     {/* <MyAccountStudent /> */}
       {/* <Blog /> */}
       {/* <Home/> */}
     {/* <AddAccountStudentAddTrainer/> */}
@@ -46,7 +45,7 @@ function App() {
 
     {/* <AddTraining /> */}
     {/* <Box/> */}
-    
+    <ChangePassword/>
 
 
       <Footer />
