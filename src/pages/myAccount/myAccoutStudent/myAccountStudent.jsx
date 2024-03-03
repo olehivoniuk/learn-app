@@ -107,7 +107,7 @@ const MyAccountStudent = () => {
       >
         <div style={{ backgroundColor: 'white', padding: '5%', width: '80%', maxWidth: '70vh', maxHeight: '70vh' }}>
           <h2 id="delete-modal-title" style={{ fontSize: '2em', marginBottom: '2vh' }}>Profile deletion confirmantion</h2>
-          <p id="delete-modal-description">We are truly sorry to see you go. Before you proced with deleting your profile, we want to know that this action is permanent and irreversible. You will lose accsess to all your account information, course progress certificates, and any learing communities you are part of. </p>
+          <p id="delete-modal-description">We are truly sorry to see you go. Before you proced with deleting your profile, we want you to know that this action is permanent and irreversible. You will lose accsess to all your account information, course progress certificates, and any learing communities you are part of. </p>
           <p id="delete-modal-description">If there is anything we can do to improve your experience or if you neen assistace with any issues you've encountered, please reach our suppport team. We are always here to help. </p>
           <p id="delete-modal-description">If your still wish to delete your account, please click on the "Confirm" button below. </p>
 
