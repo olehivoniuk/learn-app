@@ -60,12 +60,13 @@ const MyAccoutEditTrainerProfile = () => {
                                 <label htmlFor="inputEmail" className="form-label">Email</label>
                                 <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder='Input text' required />
                             </div>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
+                            <div class="d-flex align-items-center">
+                            <label class="form-check-label me-2" for="flexSwitchCheckChecked">Active</label>
+                            <div class="form-check form-switch">                          
+                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
                             </div>
-                            <div className="text-end button-save-student-info ">
-                            </div>
+                          </div>
+
                         </form>
                     </div>
                 </div>

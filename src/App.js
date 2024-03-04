@@ -45,7 +45,7 @@ function App() {
       {/* <Home/> */}
     {/* <AddAccountStudentAddTrainer/> */}
     {/* <AddTodoForm /> */}
-    {/* <EditMyStudentAccount /> */}
+    <EditMyStudentAccount />
     {/* <StudentTraining /> */}
 
     {/* <AddTraining /> */}
@@ -54,7 +54,7 @@ function App() {
     {/* <ChangePasswordStatus /> */}
     {/* <TrainerLogInHome/> */}
     {/* <MyAccountTrainerProfile/> */}
-    <MyAccoutEditTrainerProfile/>
+    {/* <MyAccoutEditTrainerProfile/> */}
 
 
       <Footer />

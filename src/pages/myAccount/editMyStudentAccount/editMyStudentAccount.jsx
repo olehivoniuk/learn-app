@@ -71,47 +71,49 @@ const EditMyStudentAccount = () => {
                 <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder='Input text' required/>
               </div>
               <div class="form-check form-switch">
-             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked/>
-             <label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
-             </div>
-             <div className="text-end button-save-student-info ">
-             <div>
-               <button type="button" className="btn btn-secondary  ">Cancel</button>
-               <button type="submit" className="btn btn-primary  ">Save changes</button>
-             </div>
+              <div className="d-flex align-items-center">
+                     <label className="form-check-label me-2" htmlFor="flexSwitchCheckChecked">Active</label>
+                     <div className="form-check form-switch">
+                       <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" defaultChecked />
+                     </div>
+                   </div>
            </div>
             </form>
           </div>
         </div>
+        <div className='text-center'>
+               <button type="button" className="btn btn-secondary m-3 ">Cancel</button>
+               <button type="submit" className="btn btn-primary  m-3  ">Save changes</button>
+             </div>
       </div>
       <Modal
-  open={modalOpen}
-  onClose={handleClose}
-  aria-labelledby="parent-modal-title"
-  aria-describedby="parent-modal-description"
-  sx={{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }}
->
-  <div style={{ backgroundColor: 'white', padding: '5%', width: '80%', maxWidth: '70vh', maxHeight: '70vh' }}>
-    <h2 id="parent-modal-title" style={{ fontSize: '2em', marginBottom: '2vh' }}>Upload Files</h2>
-    <div style={{ border: '2px dashed grey', padding: '5%', textAlign: 'center', minHeight: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
-      <div>
-        <img src="upload-icon.png" alt="Upload icon" style={{ width: '50%', height: 'auto', margin: 'auto' }} />
-      </div>
-      <div>Drop files here</div>
-      <div>PNG or JPG</div>
-      <div>or</div>
-      <div>Browse files</div>
-    </div>
-    <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '3vh' }}>
-      <button style={{ marginRight: '2%', padding: '1% 2%', minWidth: '80px' }}>Cancel</button>
-      <button style={{ padding: '1% 2%', minWidth: '80px' }}>Upload</button>
-    </div>
-  </div>
-</Modal>
+          open={modalOpen}
+          onClose={handleClose}
+          aria-labelledby="parent-modal-title"
+          aria-describedby="parent-modal-description"
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <div style={{ backgroundColor: 'white', padding: '5%', width: '80%', maxWidth: '70vh', maxHeight: '70vh' }}>
+            <h2 id="parent-modal-title" style={{ fontSize: '2em', marginBottom: '2vh' }}>Upload Files</h2>
+            <div style={{ border: '2px dashed grey', padding: '5%', textAlign: 'center', minHeight: '30vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
+              <div>
+                <img src="upload-icon.png" alt="Upload icon" style={{ width: '50%', height: 'auto', margin: 'auto' }} />
+              </div>
+              <div>Drop files here</div>
+              <div>PNG or JPG</div>
+              <div>or</div>
+              <div>Browse files</div>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '3vh' }}>
+              <button style={{ marginRight: '2%', padding: '1% 2%', minWidth: '80px' }}>Cancel</button>
+              <button style={{ padding: '1% 2%', minWidth: '80px' }}>Upload</button>
+            </div>
+          </div>
+        </Modal>
     </div>
   );
 }
