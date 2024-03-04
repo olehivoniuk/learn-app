@@ -30,9 +30,9 @@ const ChangePassword = () => {
               <input type="password" className="form-control custom-input" id="confirmNewPassword" placeholder="Confirm new password" />
             </div>
             <div className="mb-3 d-flex justify-content-end">
-  <button type="button" className="btn btn-secondary me-2">Cancel</button>
-  <button type="submit" className="btn btn-primary">Change password</button>
-</div>
+                 <button type="button" className="btn btn-secondary me-2">Cancel</button>
+                 <button type="submit" className="btn btn-primary">Change password</button>
+               </div>
           </form>
         </div>
       </div>

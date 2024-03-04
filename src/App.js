@@ -1,29 +1,8 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer/footer';
-
 import Navigation from './components/navigation/navigation';
-import LoginForm from './components/loginForm/loginForm';
-import Home from './pages/homePage/home';
-import JoinUs from './pages/joinUs/joinUs';
-import AboutUs from './pages/aboutUs/aboutUs';
-import Blog from './pages/blog/blog';
-import JoinUsTrainer from './pages/joinUsTrainer/joinUsTrainer';
-import JoinUsTrainerValidation from './pages/joinUsTrainerValidation/joinUsTrainerValidation';
-import JoinUsStudent from './pages/joinUsStudent/joinUsStudent';
-import StudentLogInHome from './pages/studentLogInHome/studentLogInHome';
-import MyAccountStudent from './pages/myAccount/myAccoutStudent/myAccountStudent';
-import AddAccountStudentAddTrainer from './pages/myAccount/myAccountStudentAddTrainer/addAccountStudentAddTrainer';
-import AddTodoForm from './addToDo/AddTodoForm';
-import EditMyStudentAccount from './pages/myAccount/editMyStudentAccount/editMyStudentAccount';
-import StudentTraining from './pages/training/studentTrainings/studentTraining';
-import AddTraining from './pages/training/addTrainings/addTraining';
-import Box from './components/box/box';
-import ChangePassword from './pages/changePassword/changePassword';
-import TrainerLogInHome from './pages/trainerLogInHome/trainerLogInHome';
-import ChangePasswordStatus from './pages/changePasswordStatus/changePasswordStatus';
-import MyAccountTrainerProfile from './pages/myAccountTrainer/myAccountTrainerProfile/myAccountTrainerProfile';
-import MyAccoutEditTrainerProfile from './pages/myAccountTrainer/myAccountEditTrainerProfile/myAccoutEditTrainerProfile';
-import MyAccountTrainerTrainings from './pages/myAccountTrainer/myAccountTrainerTrainings/myAccountTrainerTrainings';
-import ChangePasswordTrainer from './pages/myAccountTrainer/changePasswordTrainer/changePasswordTrainer';
+import routes from './routs/routes'; // Import your routes
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -34,39 +13,15 @@ function App() {
   
   return (
     <div className="App">
+      <Router>
       <Navigation />
-      {/* <LoginForm/> */}
-      {/* <JoinUsTrainer /> */}
-      {/* <JoinUsTrainerValidation /> */}
-     {/* <JoinUsStudent /> */}
-     {/* <StudentLogInHome /> */}
-     {/* <JoinUs /> */}
-     {/* <AboutUs /> */}
-     {/* <MyAccountStudent /> */}
-      {/* <Blog /> */}
-      {/* <Home/> */}
-    {/* <AddAccountStudentAddTrainer/> */}
-    {/* <AddTodoForm /> */}
-    {/* <EditMyStudentAccount /> */}
-    {/* <StudentTraining /> */}
-
-    {/* <AddTraining /> */}
-    {/* <Box/> */}
-    {/* <ChangePassword/> */}
-    {/* <ChangePasswordStatus /> */}
-    {/* <TrainerLogInHome/> */}
-    {/* <MyAccountTrainerProfile/> */}
-    {/* <MyAccoutEditTrainerProfile/> */}
-    {/* <MyAccountTrainerTrainings/> */}
-    <ChangePasswordTrainer/>
-
-
+      <Routes>
+        {routes.map(({ path, Element }) => (
+          <Route key={path} path={path} element={Element} />
+        ))}
+      </Routes>
       <Footer />
-
-
-    
-    
-
+    </Router>
     </div>
   );
 }
