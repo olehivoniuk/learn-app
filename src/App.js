@@ -20,6 +20,7 @@ import Box from './components/box/box';
 import ChangePassword from './pages/changePassword/changePassword';
 import TrainerLogInHome from './pages/trainerLogInHome/trainerLogInHome';
 import ChangePasswordStatus from './pages/changePasswordStatus/changePasswordStatus';
+import MyAccountTrainerProfile from './pages/myAccountTrainer/myAccountTrainerProfile/myAccountTrainerProfile';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -50,7 +51,8 @@ function App() {
     {/* <Box/> */}
     {/* <ChangePassword/> */}
     {/* <ChangePasswordStatus /> */}
-    <TrainerLogInHome/>
+    {/* <TrainerLogInHome/> */}
+    <MyAccountTrainerProfile/>
 
 
       <Footer />

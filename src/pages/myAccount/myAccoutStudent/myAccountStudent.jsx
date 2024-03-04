@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AvatarStudent from '../../../images/AvatarStudent.png';
+import AvatarTrainer from '../../../images/AvatarTrainer.png';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import './myAccountStudent.css';
@@ -22,7 +22,7 @@ const MyAccountStudent = () => {
         <div className="col-md-6">
           <h2>My Profile</h2>
           <div className="mb-3">
-            <img src={AvatarStudent} alt="Profile" className="img-fluid student-profile-image" />
+            <img src={AvatarTrainer} alt="Profile" className="img-fluid student-profile-image" />
           </div>
           <div className="mb-3">
             <label>First Name:</label>
