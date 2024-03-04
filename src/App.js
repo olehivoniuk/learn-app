@@ -45,7 +45,7 @@ function App() {
       {/* <Home/> */}
     {/* <AddAccountStudentAddTrainer/> */}
     {/* <AddTodoForm /> */}
-    <EditMyStudentAccount />
+    {/* <EditMyStudentAccount /> */}
     {/* <StudentTraining /> */}
 
     {/* <AddTraining /> */}

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import AvatarTrainer from '../../../images/AvatarTrainer.png';
 import './myAccountTrainerProfile.css'
 
