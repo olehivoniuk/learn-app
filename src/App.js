@@ -23,6 +23,7 @@ import ChangePasswordStatus from './pages/changePasswordStatus/changePasswordSta
 import MyAccountTrainerProfile from './pages/myAccountTrainer/myAccountTrainerProfile/myAccountTrainerProfile';
 import MyAccoutEditTrainerProfile from './pages/myAccountTrainer/myAccountEditTrainerProfile/myAccoutEditTrainerProfile';
 import MyAccountTrainerTrainings from './pages/myAccountTrainer/myAccountTrainerTrainings/myAccountTrainerTrainings';
+import ChangePasswordTrainer from './pages/myAccountTrainer/changePasswordTrainer/changePasswordTrainer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -56,7 +57,8 @@ function App() {
     {/* <TrainerLogInHome/> */}
     {/* <MyAccountTrainerProfile/> */}
     {/* <MyAccoutEditTrainerProfile/> */}
-    <MyAccountTrainerTrainings/>
+    {/* <MyAccountTrainerTrainings/> */}
+    <ChangePasswordTrainer/>
 
 
       <Footer />
