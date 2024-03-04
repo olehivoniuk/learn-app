@@ -1,0 +1,11 @@
+option {
+    background-color: white ;
+  }
+  
+  option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  option:focus {
+    background-color: #e9e9e9;
+  }
