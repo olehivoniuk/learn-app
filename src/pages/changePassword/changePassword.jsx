@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './changePassword.css';
 
 const ChangePassword = () => {
@@ -31,7 +32,7 @@ const ChangePassword = () => {
             </div>
             <div className="mb-3 d-flex justify-content-end">
                  <button type="button" className="btn btn-secondary me-2">Cancel</button>
-                 <button type="submit" className="btn btn-primary">Change password</button>
+                 <Link  to='/change-password-status' type="submit" className="btn btn-primary">Change password</Link>
                </div>
           </form>
         </div>

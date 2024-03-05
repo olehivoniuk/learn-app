@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import AvatarTrainer from '../../../images/AvatarTrainer.png';
 import './myAccountTrainerProfile.css'
 
@@ -33,8 +34,8 @@ const MyAccountTrainerProfile = () => {
               <p>johndoe@example.com</p>
             </div>
             <div className="d-flex justify-content-start mb-3">
-              <button className="btn btn-primary me-3">Edit Profile</button>
-              <button className="btn btn-primary">Change Password</button>
+              <Link to="/my-account-edit-trainer-profile" className="btn btn-primary me-3">Edit Profile</Link>
+              <Link to='/change-password-trainer' className="btn btn-primary">Change Password</Link>
             </div>
           </div>
           <div className="col-md-6">
@@ -88,7 +89,7 @@ const MyAccountTrainerProfile = () => {
                 <p className='mt-5'>The training section is interactive, allows you to engage with trainers and fellow learners, participate in quizzes, and track your progress. All our courses are flexible and adaptable to your schedule and learning speed.</p>
               </div>
             </div>
-            <button className="btn btn-primary mt-5">View Trainings</button>
+            <Link to='/my-account-trainer-trainings' className="btn btn-primary mt-5">View Trainings</Link>
           </div>
         </div>
         
