@@ -1,13 +1,13 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
-import './joinUsButton.css'
+import './joinUsButton.css';
 
 const JoinUsButton = () => {
   return (
-    <button className="join-button">
-      Join us
-    </button>
-  )
-}
+    <Link to='/join-us' className='join-button'>
+      Join Us
+    </Link>
+  );
+};
 
-export default JoinUsButton
+export default JoinUsButton;

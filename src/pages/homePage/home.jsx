@@ -1,4 +1,3 @@
-import Footer from '../../components/footer/footer'
 import Rectangle1 from '../../images/Rectangle1.png'
 import JoinUsBox from '../../components/joinUsBox/joinUsBox'
 
