@@ -1,4 +1,7 @@
 
+import { Link } from 'react-router-dom';
+
+
 import StudentReg from '../../images/StudentReg.png';
 import './joinUsStudent.css'
 
@@ -39,7 +42,9 @@ const JoinUsStudent = () => {
                   <input type="text" className="form-control" id="inputLastName" aria-describedby="lastNameHelp"  placeholder='Input text' required/>
                 </div>
               </form>
-              <button type="submit" className="btn btn-primary w-100 button-trainer-reg">Submit</button>
+              <Link to="/join-us-student-validation" className="btn btn-primary w-100 button-trainer-reg">
+                Submit
+              </Link>
             </div>
           </div>
         </div>

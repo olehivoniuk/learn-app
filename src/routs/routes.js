@@ -7,6 +7,7 @@ import AboutUs from '../pages/aboutUs/aboutUs';
 import Blog from '../pages/blog/blog';
 import JoinUsTrainer from '../pages/joinUsTrainer/joinUsTrainer';
 import JoinUsTrainerValidation from '../pages/joinUsTrainerValidation/joinUsTrainerValidation';
+import JoinUsStudentValidation from '../pages/joinUsStudentValidation/joinUsStudentValidation';
 import JoinUsStudent from '../pages/joinUsStudent/joinUsStudent';
 import StudentLogInHome from '../pages/studentLogInHome/studentLogInHome';
 import MyAccountStudent from '../pages/myAccount/myAccoutStudent/myAccountStudent';
@@ -33,6 +34,7 @@ const routes = [
   { path: "/join-us-trainer", Element: <JoinUsTrainer /> },
   { path: "/join-us-trainer-validation", Element: <JoinUsTrainerValidation /> },
   { path: "/join-us-student", Element: <JoinUsStudent /> },
+  { path: "/join-us-student-validation", Element: <JoinUsStudentValidation /> }, // Corrected path
   { path: "/student-login-home", Element: <StudentLogInHome /> },
   { path: "/my-account-student", Element: <MyAccountStudent /> },
   { path: "/add-account-student-add-trainer", Element: <AddAccountStudentAddTrainer /> },
@@ -50,5 +52,4 @@ const routes = [
   { path: "/change-password-trainer", Element: <ChangePasswordTrainer /> },
 ];
 
-
-export default routes; 
+export default routes;

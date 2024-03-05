@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import TrainerReg from '../../images/TrainerReg.png';
 import './joinUsTrainer.css'
 
@@ -39,7 +39,7 @@ const JoinUsTrainer = () => {
               </select>
             </div>
           </form>
-          <button type="submit" className="btn btn-primary w-100 custom-margin-top">Submit</button>
+          <Link to='/join-us-trainer-validation' className="btn btn-primary w-100 custom-margin-top">Submit</Link>
         </div>
       </div>
     </div>

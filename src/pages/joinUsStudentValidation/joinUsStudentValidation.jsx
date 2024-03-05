@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import './joinUsTrainerValidation.css'
+import '../joinUsTrainerValidation/joinUsTrainerValidation.css'
 
-
-const JoinUsTrainerValidation = () => {
+const JoinUsStudentValidation = () => {
     return (
       <div>
         <div className="container">
@@ -36,7 +35,7 @@ const JoinUsTrainerValidation = () => {
 
                       <div>
                       <p className="text-center">
-                       Osxar_st
+                       John_trainer
                       </p>
                       </div>
 
@@ -48,13 +47,13 @@ const JoinUsTrainerValidation = () => {
 
                       <div>
                       <p className="text-center">
-                       qwerty123
+                       qwerty1235
                       </p>
                       </div>
 
                       <div>
                       <p className="text-center">
-                      <Link to='/trainer-login-home' className="btn btn-primary">My account</Link>
+                      <Link to='/student-login-home' className="btn btn-primary">My account</Link>
                       </p>
                       </div>
                 </div>
@@ -63,5 +62,5 @@ const JoinUsTrainerValidation = () => {
       </div>
     );
   }
-  
-  export default JoinUsTrainerValidation;
+
+export default JoinUsStudentValidation
