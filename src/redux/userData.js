@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const userData = createSlice({
+export const userDataSlice = createSlice({
 	name: 'userData',
 	initialState: [],
 	reducers: {
-		sentData: (state, action) => {
+		sendData: (state, action) => {
 			const userData = {
 				id: new Date(),
-				sentInfo: action.payload.sentInfo,
+				info: action.payload.info,
 				completed: false,
 			};
 			state.push(userData);
@@ -17,6 +17,6 @@ export const userData = createSlice({
 });
 
 
-export const { addTodo } = userData.actions;
+export const { sendData } = userDataSlice.actions;
 
-export default userData.reducer;
+export default userDataSlice.reducer;
