@@ -1,13 +1,16 @@
-// Navigation component
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Group1 from '../../images/Group1.jpg';
 import JoinUsButton from '../joinUsButton/joinUsButton';
 import Box from '../box/box';
-import './navigation.css'
+import './navigation.css';
 
 const Navigation = () => {
-  const userEmail = 'example@example.com';
+  const userData = useSelector(state => state.userData);
+  const loggedInUser = userData.find(user => user.isLoggedIn);
+  const role = userData.find(user => user.role); // Find the logged-in user
+  const isLoggedIn = !!loggedInUser; // Check if any user is logged in
 
   return (
     <div className='nav-container'>
@@ -30,11 +33,12 @@ const Navigation = () => {
         <div>
           <JoinUsButton />
         </div>
-       
       </nav>
-      <div className="mini-profile-wrapper d-flex justify-content-end align-items-center">
-          <Box userEmail={userEmail} />
+      {isLoggedIn && (
+        <div className="mini-profile-wrapper d-flex justify-content-end align-items-center">
+          <Box   isLoggedIn={isLoggedIn} role={role}/>
         </div>
+      )}
     </div>
   );
 }
