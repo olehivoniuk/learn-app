@@ -24,7 +24,7 @@ const LoginForm = () => {
         if (user.role === 'student') {
           navigate('/my-account-student');
         } else if (user.role === 'trainer') {
-          navigate('/trainer-login-home');
+          navigate('/my-account-trainer-profile');
         }
       } else {
         setErrorMessage('Incorrect username or password');
