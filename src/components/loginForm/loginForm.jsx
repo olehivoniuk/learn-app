@@ -1,30 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { sendData } from '../../redux/userData';
+import { addFormData } from '../../redux/userData'; // Import the action
 import { Link } from 'react-router-dom';
 import './loginForm.css';
 
 const LoginForm = () => {
-  const [formData, setFormData] = useState([]); // State to hold form data array
-  const [username, setUsername] = useState(''); // State for username input
-  const [password, setPassword] = useState(''); // State for password input
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const dispatch = useDispatch();
+
+  // Define useEffect hook outside of onSubmit function
+  useEffect(() => {
+    console.log('Form Data:', { username, password });
+  }, [username, password]);
 
   const onSubmit = (event) => {
     event.preventDefault();
     if (username && password) {
-      const newFormData = { username, password };
-      setFormData([...formData, newFormData]);
-      dispatch(sendData(newFormData));
+      const formData = { username, password }; // Create form data object
+      dispatch(addFormData(formData)); // Dispatch action to add form data
       setUsername('');
       setPassword('');
     }
   };
-
-  // Log formData whenever it changes
-  useEffect(() => {
-    console.log('Form Data:', formData);
-  }, [formData]);
 
   return (
     <div className="d-flex justify-content-center align-items-center h-100">
