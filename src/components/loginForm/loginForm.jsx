@@ -1,26 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { addFormData } from '../../redux/userData'; // Import the action
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import './loginForm.css';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
+  const userData = useSelector(state => state.userData);
 
-  // Define useEffect hook outside of onSubmit function
   useEffect(() => {
-    console.log('Form Data:', { username, password });
+    setErrorMessage('');
   }, [username, password]);
 
   const onSubmit = (event) => {
     event.preventDefault();
     if (username && password) {
-      const formData = { username, password }; // Create form data object
-      dispatch(addFormData(formData)); // Dispatch action to add form data
-      setUsername('');
-      setPassword('');
+      // Check if the entered username and password match any user data
+      const user = userData.find(user => user.username === username && user.password === password);
+      if (user) {
+        // Redirect the user based on their role
+        if (user.role === 'student') {
+          navigate('/my-account-student');
+        } else if (user.role === 'trainer') {
+          navigate('/trainer-login-home');
+        }
+      } else {
+        setErrorMessage('Incorrect username or password');
+      }
     }
   };
 
@@ -29,6 +37,7 @@ const LoginForm = () => {
       <form onSubmit={onSubmit} className="login-form">
         <h1 className="sign-in-heading text-center">Sign in</h1>
         <h3 className="text-center">Welcome back</h3>
+        {errorMessage && <p className="text-danger">{errorMessage}</p>}
         <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input
