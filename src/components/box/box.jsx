@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux'; // Importing useSelector hook
+import { useSelector, useDispatch } from 'react-redux'; // Importing useSelector and useDispatch hooks
 import AvatarStudent from '../../images/AvatarStudent.png';
 import AvatarTrainer from '../../images/AvatarTrainer.png';
 import { Link } from 'react-router-dom';
+import { signOut } from '../../redux/userData'; // Import the signOut action
 import './box.css';
 
 const Box = ({ isLoggedIn, userEmail }) => { // Remove the 'role' prop since it will be fetched from Redux
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch(); // Initialize the dispatch hook
   const role = useSelector(state => state.userData.find(user => user.isLoggedIn)?.role); // Accessing role from Redux state
 
   const toggleProfile = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleSignOutClick = () => {
+    dispatch(signOut()); // Dispatch the signOut action
   };
 
   const renderProfile = () => {
@@ -46,7 +52,7 @@ const Box = ({ isLoggedIn, userEmail }) => { // Remove the 'role' prop since it 
                 <input type="checkbox" id="night-mode-toggle" />
               </div>
               <div className="line"></div>
-              <Link to="/login" className="sign-out-link">
+              <Link to="/login" className="sign-out-link" onClick={handleSignOutClick}>
                 Sign Out
               </Link>
             </div>
