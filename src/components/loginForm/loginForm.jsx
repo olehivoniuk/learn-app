@@ -26,7 +26,7 @@ const LoginForm = () => {
         // Update the user's isLoggedIn status to true
         dispatch(addFormData({ ...user, isLoggedIn: true }));
         // Redirect the user based on their role
-        navigate(user.role === 'student' ? '/my-account-student' : '/my-account-trainer');
+        navigate(user.role === 'student' ? '/my-account-student' : '/my-account-trainer-profile');
       } else {
         setErrorMessage('Incorrect username or password');
       }
