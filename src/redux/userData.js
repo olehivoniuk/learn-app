@@ -6,7 +6,7 @@ const initialState = [
   { id: 2, username: 'stud2', password: 'pass2', role: 'student', isLoggedIn: false },
   { id: 3, username: 'trainer1', password: 'password1', role: 'trainer', isLoggedIn: false },
   { id: 4, username: 'trainer2', password: 'password2', role: 'trainer', isLoggedIn: false },
-  { id: 5, username: 'trainer3', password: 'password3', role: 'trainer', isLoggedIn: false },
+  { id: 5, username: 'train', password: 'pass3', role: 'trainer', isLoggedIn: false },
 ];
 
 const userDataSlice = createSlice({
