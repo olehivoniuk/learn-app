@@ -86,7 +86,7 @@ const LoginForm = () => {
           </label>
         </div>
       </form>
-      {submitClicked && <Box isLoggedIn={true} role={'student'} />} {/* Render Box component when submit button is clicked */}
+      {submitClicked && userData.isLoggedIn && <Box role={'student'} />} {/* Render Box component only if isLoggedIn is true */}
     </div>
   );
 };
