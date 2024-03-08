@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { addFormData } from '../../redux/userData';
-import Box from '../box/box'; // Import the Box component
+// import Box from '../box/box'; // Import the Box component
+// import MiniBoxTrainer from '../box/miniBoxTrainer';
 import './loginForm.css';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [submitClicked, setSubmitClicked] = useState(false); // State to track submit button click
+  // const [submitClicked, setSubmitClicked] = useState(false); // State to track submit button click
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userData = useSelector(state => state.userData);
@@ -33,7 +34,7 @@ const LoginForm = () => {
     } else {
       setErrorMessage('Please enter username and password');
     }
-    setSubmitClicked(true); // Set submitClicked to true when the form is submitted
+    // setSubmitClicked(true); // Set submitClicked to true when the form is submitted
   };
 
   return (
@@ -86,7 +87,8 @@ const LoginForm = () => {
           </label>
         </div>
       </form>
-      {submitClicked && userData.isLoggedIn && <Box role={'student'} />} {/* Render Box component only if isLoggedIn is true */}
+      {/* {submitClicked && <Box isLoggedIn={false} role={'trainer'} />} Render Box component when submit button is clicked */}
+      {/* {submitClicked && <MiniBoxTrainer isLoggedIn={true} role={'student'} />} */}
     </div>
   );
 };

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux'; // Importing useSelector hook
 import AvatarStudent from '../../images/AvatarStudent.png';
 import AvatarTrainer from '../../images/AvatarTrainer.png';
 import { Link } from 'react-router-dom';
 import './box.css';
 
-const Box = ({ isLoggedIn, role, userEmail }) => {
+const Box = ({ isLoggedIn, userEmail }) => { // Remove the 'role' prop since it will be fetched from Redux
   const [isOpen, setIsOpen] = useState(false);
+  const role = useSelector(state => state.userData.find(user => user.isLoggedIn)?.role); // Accessing role from Redux state
 
   const toggleProfile = () => {
     setIsOpen(!isOpen);
@@ -13,19 +15,30 @@ const Box = ({ isLoggedIn, role, userEmail }) => {
 
   const renderProfile = () => {
     if (isLoggedIn) {
+      let profileName, profileImage, accountLink;
+      if (role === 'student') {
+        profileName = 'Student';
+        profileImage = AvatarStudent;
+        accountLink = '/my-account-student';
+      } else if (role === 'trainer') {
+        profileName = 'Trainer';
+        profileImage = AvatarTrainer;
+        accountLink = '/my-account-trainer-profile';
+      }
+  
       return (
         <div className="mini-profile">
           <div className="profile-icon" onClick={toggleProfile}>
             <i className="fas fa-user">
-              <div>{role === 'student' ? 'Student' : 'Trainer'} Name</div>
-              <img src={role === 'student' ? AvatarStudent : AvatarTrainer} alt="user" style={{ maxWidth: '9vh' }} />
+              <div>{profileName} Name</div>
+              <img src={profileImage} alt="user" style={{ maxWidth: '9vh' }} />
             </i>
           </div>
           {isOpen && (
             <div className="profile-details">
-              <p className="email">{userEmail}</p> {/* Display userEmail from props */}
+              <p className="email">{userEmail}</p>
               <div className="line"></div>
-              <Link to={role === 'student' ? '/my-account-student' : '/my-account-trainer-profile'} className="profile-link">
+              <Link to={accountLink} className="profile-link">
                 My Account
               </Link>
               <div className="toggle">
@@ -43,6 +56,7 @@ const Box = ({ isLoggedIn, role, userEmail }) => {
     }
     return null;
   };
+  
 
   return (
     <div>

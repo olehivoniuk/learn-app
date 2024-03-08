@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import Trainer from '../../images/Trainer.png'
 import Student from '../../images/Student.png'
 
-import JoinUsButton from '../../components/joinUsButton/joinUsButton';
 import './joinUs.css'
 
 
