@@ -1,3 +1,14 @@
-.mini-profile{
-    max-width: 20vh;
+.mini-profile {
+ position: relative; 
+  height: 50px; 
+
 }
+
+.profile-info {
+    display: flex;
+    align-items: center; /* Align children vertically in the center */
+  }
+  
+  .profile-info > * {
+    margin-right: 8px; /* Add some spacing between the profile name and the image */
+  }

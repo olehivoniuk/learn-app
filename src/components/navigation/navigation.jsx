@@ -2,18 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Group1 from '../../images/Group1.jpg';
-import JoinUsButton from '../joinUsButton/joinUsButton'; // Import JoinUsButton component
+import JoinUsButton from '../joinUsButton/joinUsButton';
 import Box from '../box/box';
 import './navigation.css';
 
 const Navigation = () => {
   const userData = useSelector(state => state.userData);
   const loggedInUser = userData.find(user => user.isLoggedIn);
-  const role = loggedInUser?.role; // Access role directly from the loggedInUser
-  const isLoggedIn = !!loggedInUser; // Check if any user is logged in
+  const role = loggedInUser?.role;
+  const isLoggedIn = !!loggedInUser;
 
   return (
-    <div className='nav-container'>
+    <div className='nav-container w-100'>
       <nav className="nav navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link to='/' className="navbar-brand">
@@ -22,10 +22,10 @@ const Navigation = () => {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               {isLoggedIn && (
-                <React.Fragment>
+                <>
                   <li className="nav-item">
                     <Link to='/' className="nav-link">Home</Link>
                   </li>
@@ -35,27 +35,30 @@ const Navigation = () => {
                   <li className="nav-item">
                     <Link to='/pages/blog/Blog' className="nav-link">Blog</Link>
                   </li>
-                </React.Fragment>
+                </>
               )}
+            </ul>
+            <ul className="navbar-nav ml-auto">
               {!isLoggedIn && (
-                <React.Fragment>
+                <>
                   <li className="nav-item">
                     <Link to='/login' className="nav-link join-button">Sign in</Link>
                   </li>
                   <li className="nav-item">
-                    <JoinUsButton /> {/* Use JoinUsButton component */}
+                    <JoinUsButton />
                   </li>
-                </React.Fragment>
+                </>
               )}
             </ul>
           </div>
         </div>
-      </nav>
-      {isLoggedIn && (
+        {isLoggedIn && (
         <div className="mini-profile-wrapper d-flex justify-content-end align-items-center">
           <Box isLoggedIn={isLoggedIn} role={role} />
         </div>
       )}
+      </nav>
+      
     </div>
   );
 }

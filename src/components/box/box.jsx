@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 import { signOut } from '../../redux/userData'; // Import the signOut action
 import './box.css';
 
-const Box = ({ isLoggedIn, userEmail }) => { // Remove the 'role' prop since it will be fetched from Redux
+const Box = ({ isLoggedIn, userEmail }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const dispatch = useDispatch(); // Initialize the dispatch hook
-  const role = useSelector(state => state.userData.find(user => user.isLoggedIn)?.role); // Accessing role from Redux state
+  const dispatch = useDispatch();
+  const role = useSelector(state => state.userData.find(user => user.isLoggedIn)?.role);
 
   const toggleProfile = () => {
     setIsOpen(!isOpen);
   };
 
   const handleSignOutClick = () => {
-    dispatch(signOut()); // Dispatch the signOut action
+    dispatch(signOut());
   };
 
   const renderProfile = () => {
@@ -33,15 +33,17 @@ const Box = ({ isLoggedIn, userEmail }) => { // Remove the 'role' prop since it 
       }
   
       return (
-        <div className="mini-profile">
+        <div className="mini-profile ">
           <div className="profile-icon" onClick={toggleProfile}>
             <i className="fas fa-user">
+              <div className="profile-info">
               <div>{profileName} Name</div>
-              <img src={profileImage} alt="user" style={{ maxWidth: '9vh' }} />
+              <img src={profileImage} alt="user" style={{ maxWidth: '10vh' }} />
+              </div>
             </i>
           </div>
           {isOpen && (
-            <div className="profile-details">
+            <div className="profile-details ">
               <p className="email">{userEmail}</p>
               <div className="line"></div>
               <Link to={accountLink} className="profile-link">
@@ -62,7 +64,6 @@ const Box = ({ isLoggedIn, userEmail }) => { // Remove the 'role' prop since it 
     }
     return null;
   };
-  
 
   return (
     <div>
