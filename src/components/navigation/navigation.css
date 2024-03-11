@@ -18,5 +18,10 @@
     color: inherit;
 }
 
+.justify-content-end-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+
 
   

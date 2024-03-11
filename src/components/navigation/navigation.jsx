@@ -35,8 +35,16 @@ const Navigation = () => {
                 </>
               )}
             </ul>
-            <ul className="navbar-nav ml-auto">
-              {!isLoggedIn && (
+            
+          </div>
+        </div>
+        {isLoggedIn 
+        ? (
+        <div className="mini-profile-wrapper d-flex justify-content-end align-items-center">
+          <Box isLoggedIn={isLoggedIn} role={role} />
+        </div>
+        ) : 
+        <ul className="navbar-nav d-flex justify-content-end align-items-center">
                 <>
                   <li className="nav-item">
                     <Link to='/login' className="nav-link join-button">Sign in</Link>
@@ -45,15 +53,8 @@ const Navigation = () => {
                     <JoinUsButton />
                   </li>
                 </>
-              )}
             </ul>
-          </div>
-        </div>
-        {isLoggedIn && (
-        <div className="mini-profile-wrapper d-flex justify-content-end align-items-center">
-          <Box isLoggedIn={isLoggedIn} role={role} />
-        </div>
-      )}
+      }
       </nav>
       
     </div>
