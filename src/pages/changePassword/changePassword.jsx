@@ -1,8 +1,29 @@
-import React from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { changePassword } from 'path/to/userDataSlice'; // Adjust the path as needed
 import { Link } from 'react-router-dom';
 import './changePassword.css';
 
 const ChangePassword = () => {
+
+  // const dispatch = useDispatch();
+  // const loggedInUser = useSelector(state => state.userData.find(user => user.isLoggedIn));
+
+  // const [currentPassword, setCurrentPassword] = useState('');
+  // const [newPassword, setNewPassword] = useState('');
+  // const [confirmNewPassword, setConfirmNewPassword] = useState('');
+
+  // const handlePasswordChange = () => {
+  //   // Check if newPassword matches confirmNewPassword
+  //   if (newPassword !== confirmNewPassword) {
+  //     alert('New password and confirm new password must match');
+  //     return;
+  //   }
+
+  //   // Dispatch action to change password
+  //   dispatch(changePassword({ userId: loggedInUser.id, newPassword }));
+  // };
+  
+
   return (
     <div className="container">
      
