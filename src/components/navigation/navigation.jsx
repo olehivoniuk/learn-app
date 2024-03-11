@@ -30,10 +30,7 @@ const Navigation = () => {
               {!isSignInClicked && (
                 <>
                   <li className="nav-item">
-                    <Link to='/' className="nav-link">Home</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to='/pages/aboutUs/aboutUs' className="nav-link">About us</Link>
+                    <Link to='/pages/aboutUs/aboutUs' className="nav-link"> About us  </Link>
                   </li>
                   <li className="nav-item">
                     <Link to='/pages/blog/Blog' className="nav-link">Blog</Link>
@@ -46,23 +43,19 @@ const Navigation = () => {
         {isLoggedIn && (
           
           <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav justify-content-start align-items-center">
-           <li className="nav-item">
-             <Link to='/' className="nav-link">Home</Link>
-           </li>
-           <li className="nav-item">
-             <Link to='/pages/aboutUs/aboutUs' className="nav-link">About us</Link>
-           </li>
-           <li className="nav-item">
-             <Link to='/pages/blog/Blog' className="nav-link">Blog</Link>
-           </li>
-           </ul>
-          
-         
-          <div className="mini-profile-wrapper d-flex justify-content-end align-items-center">
+          <ul className="navbar-nav mr-auto list-logged-in-links"> 
+            <li className="nav-item">
+              <Link to='/pages/aboutUs/aboutUs' className="nav-link">About us</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/pages/blog/Blog' className="nav-link">Blog</Link>
+            </li>
+          </ul>
+        
+          <div className="mini-profile-wrapper d-flex justify-content-end w-100"> 
             <Box isLoggedIn={isLoggedIn} role={role} />
           </div>
-          </div>
+        </div>
         )}
         {!isSignInClicked && !isLoggedIn && (
           <ul className="navbar-nav d-flex justify-content-end w-100">

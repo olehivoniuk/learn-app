@@ -16,12 +16,19 @@
 .nav-item {
     text-decoration: none;
     color: inherit;
+    margin-right: 10px;
+}
+.list-logged-in-links{
+    position: relative;
+    margin-right: 125vh;
 }
 
-.justify-content-end-links {
-    display: flex;
-    justify-content: flex-end;
-  }
+
+
+
+
+
+
 
 
   
