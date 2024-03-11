@@ -44,12 +44,12 @@ const Navigation = () => {
           <Box isLoggedIn={isLoggedIn} role={role} />
         </div>
         ) : 
-        <ul className="navbar-nav d-flex justify-content-end align-items-center">
+        <ul className="navbar-nav d-flex justify-content-end w-100">
                 <>
                   <li className="nav-item">
-                    <Link to='/login' className="nav-link join-button">Sign in</Link>
+                    <Link to='/login' className="nav-link join-button " style={{ marginRight: '10px', marginBottom: "5px" }}>Sign in</Link>
                   </li>
-                  <li className="nav-item navigation-join-us-button">
+                  <li className="nav-item navigation-join-us-button ml-2" style={{ marginRight: '10px', marginTop: "8px" }}>
                     <JoinUsButton />
                   </li>
                 </>
