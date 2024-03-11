@@ -38,7 +38,7 @@ const Box = ({ isLoggedIn, userEmail }) => {
             <i className="fas fa-user">
               <div className="profile-info">
               <div>{profileName} Name</div>
-              <img src={profileImage} alt="user" style={{ maxWidth: '10vh' }} />
+              <img src={profileImage} alt="user" style={{ maxWidth: '6vh', borderRadius: "50px"}}  />
               </div>
             </i>
           </div>
