@@ -22,9 +22,16 @@ const userDataSlice = createSlice({
         user.isLoggedIn = false;
       });
     },
+    changeUserPassword: (state, action) => {
+      const { userId, newPassword } = action.payload;
+      const user = state.find(user => user.id === userId);
+      if (user) {
+        user.password = newPassword;
+      }
+    },
   },
 });
 
-export const { addFormData, signOut } = userDataSlice.actions;
+export const { addFormData, signOut, changeUserPassword } = userDataSlice.actions;
 
 export default userDataSlice.reducer;
