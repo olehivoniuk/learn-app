@@ -11,7 +11,9 @@ const ChangePasswordTrainer = () => {
   const [newPassword, setNewPassword] = useState('');
   const [confirmNewPassword, setConfirmNewPassword] = useState('');
 
-  const handlePasswordChange = () => {
+  const handlePasswordChange = (e) => {
+    e.preventDefault(); // Prevents the default form submission behavior
+    
     // 1. Check if the entered current password matches the logged-in user's password
     if (currentPassword !== loggedInUser.password) {
       alert('Incorrect password, request denied');
