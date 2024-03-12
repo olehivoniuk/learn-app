@@ -30,7 +30,8 @@ const Navigation = () => {
               {!isSignInClicked && (
                 <>
                   <li className="nav-item">
-                    <Link to='/pages/aboutUs/aboutUs' className="nav-link"> About us  </Link>
+                  <Link to='/pages/aboutUs/aboutUs' className="nav-link" style={{ whiteSpace: 'nowrap' }}>About us</Link>
+
                   </li>
                   <li className="nav-item">
                     <Link to='/pages/blog/Blog' className="nav-link">Blog</Link>
@@ -45,7 +46,7 @@ const Navigation = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mr-auto list-logged-in-links"> 
             <li className="nav-item">
-              <Link to='/pages/aboutUs/aboutUs' className="nav-link">About us</Link>
+              <Link to='/pages/aboutUs/aboutUs' className="nav-link" style={{ whiteSpace: 'nowrap' }}>About us</Link>
             </li>
             <li className="nav-item">
               <Link to='/pages/blog/Blog' className="nav-link">Blog</Link>
