@@ -7,7 +7,7 @@ import './trainerLogInHome.css'
 const TrainerLogInHome = () => {
   const firstName = useSelector(state => {
     const trainerUser = state.userData.find(user => user.role === 'trainer' && user.isLoggedIn);
-    return trainerUser ? trainerUser.username.split(' ')[0] : null;
+    return trainerUser ? trainerUser.username.split('_')[0] : null;
   });
   return  (
     <div>

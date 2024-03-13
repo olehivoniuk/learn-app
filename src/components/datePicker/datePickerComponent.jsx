@@ -5,7 +5,7 @@ import 'react-responsive-datepicker/dist/index.css';
 
 function DatePickerComponent({ data }) {
 
-  const [selectedDate, setSelectedDate] = useState(new Date);
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const onChangeCallback = (date) => {
     setSelectedDate(date);
   };

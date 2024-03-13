@@ -36,7 +36,7 @@ const JoinUsTrainer = () => {
     dispatch(
       addFormData({
         id: userId,
-        username: `${formData.firstName} ${formData.lastName}`,
+        username: `${formData.firstName}_${formData.lastName.slice(0,1)}`,
         email: formData.email,
         role: 'trainer',
         specialization: formData.specialization,
