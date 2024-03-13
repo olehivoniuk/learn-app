@@ -18,6 +18,7 @@ const Box = ({ isLoggedIn, userEmail }) => {
   const handleSignOutClick = () => {
     dispatch(signOut());
   };
+  
 
   const renderProfile = () => {
     if (isLoggedIn) {

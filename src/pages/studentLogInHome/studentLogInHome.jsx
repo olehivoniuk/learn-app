@@ -1,17 +1,23 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import StudentLogInHome1 from "../../images/StudentLogInHome1.png";
 import StudentLogInHome2 from "../../images/StudentLogInHome2.png";
 import StudentLogInHome3 from "../../images/StudentLogInHome3.png";
 import './studentLogInHome.css';
 
 const StudentLogInHome = () => {
+  const firstName = useSelector(state => {
+    const studentUser = state.userData.find(user => user.role === 'student' && user.isLoggedIn);
+    return studentUser ? studentUser.username.split(' ')[0] : null;
+  });
+
   return (
     <div>
       <div className="container student-log-in-home-heading">
         <div className="row justify-content-center">
           <div className="col-md-4">
             <div className="mt-5">
-              <h1 className='student-log-in-home-heading'>Hi, Name! </h1>
+              <h1 className='student-log-in-home-heading'>Hi, {firstName}! </h1>
               <p>Welcome Learn Platform - where every day is a day to learn. Dive into the vast ocean of knowledge and empower yourself with the tools for a successful tomorrow. Happy learning!</p>
             </div>
             <div className="mt-6">
