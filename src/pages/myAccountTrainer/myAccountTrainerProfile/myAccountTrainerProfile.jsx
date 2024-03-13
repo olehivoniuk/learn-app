@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import AvatarTrainer from '../../../images/AvatarTrainer.png';
-import './myAccountTrainerProfile.css'
 
 const MyAccountTrainerProfile = () => {
    
     return (
       <div className="container mt-5">
-        <h1 className='my-account-heading '>My Account</h1>
+        <h1 className='my-account-heading'>My Account</h1>
         <div className="row mt-5">
           <div className="col-md-6">
             <h2>My Profile</h2>
@@ -14,23 +13,27 @@ const MyAccountTrainerProfile = () => {
               <img src={AvatarTrainer} alt="Profile" className="img-fluid student-profile-image" />
             </div>
             <div className="mb-3">
-              <label>First Name:</label>
+              <label className="fw-bold">First Name:</label>
               <p>John</p>
             </div>
             <div className="mb-3">
-              <label>Last Name:</label>
+              <label className="fw-bold">Last Name:</label>
               <p>Doe</p>
             </div>
             <div className="mb-3">
-              <label>User Name:</label>
+              <label className="fw-bold">User Name:</label>
               <p>johndoe123</p>
             </div>
             <div className="mb-3">
-              <label>Address:</label>
+              <label className="fw-bold">Specialization:</label>
+              <p>JavaScript</p>
+            </div>
+            <div className="mb-3">
+              <label className="fw-bold">Address:</label>
               <p>123 Street, City, Country</p>
             </div>
             <div className="mb-3">
-              <label>Email:</label>
+              <label className="fw-bold">Email:</label>
               <p>johndoe@example.com</p>
             </div>
             <div className="d-flex justify-content-start mb-3">
@@ -40,42 +43,42 @@ const MyAccountTrainerProfile = () => {
           </div>
           <div className="col-md-6">
             <div className="d-flex justify-content-between mb-3">
-              <h2>My Trainers</h2>
+              <h2>My Students</h2>
             </div>
             <table className="table">
               <thead>
                 <tr>
-                  <th>Name</th>
+                  <th className="fw-bold">Name</th>
                   <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Elizabeth Lopez</td>
+                  <td className="fw-bold">Elizabeth Lopez</td>
                   <td>Active</td>
                 </tr>
                 <tr>
-                  <td>Matthew Martinez</td>
+                  <td className="fw-bold">Matthew Martinez</td>
                   <td>Active</td>
                 </tr>
                 <tr>
-                  <td>Elizabeth Hall</td>
+                  <td className="fw-bold">Elizabeth Hall</td>
                   <td>Not active</td>
                 </tr>
                 <tr>
-                  <td>Maria White</td>
+                  <td className="fw-bold">Maria White</td>
                   <td>Not active</td>
                 </tr>
                 <tr>
-                  <td>Elizabeth Watson</td>
+                  <td className="fw-bold">Elizabeth Watson</td>
                   <td>Not active</td>
                 </tr>
                 <tr>
-                  <td>Elizabeth Allen</td>
+                  <td className="fw-bold">Elizabeth Allen</td>
                   <td>Not active</td>
                 </tr>
                 <tr>
-                  <td>Caleb Johnson</td>
+                  <td className="fw-bold">Caleb Johnson</td>
                   <td>Not active</td>
                 </tr>
               </tbody>

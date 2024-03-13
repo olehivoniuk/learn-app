@@ -2,19 +2,20 @@ import { useSelector } from 'react-redux';
 import StudentLogInHome1 from "../../images/StudentLogInHome1.png";
 import StudentLogInHome2 from "../../images/StudentLogInHome2.png";
 import StudentLogInHome3 from "../../images/StudentLogInHome3.png";
-import './trainerLogInHome.css'
+import './trainerLogInHome.css';
 
 const TrainerLogInHome = () => {
   const firstName = useSelector(state => {
     const trainerUser = state.userData.find(user => user.role === 'trainer' && user.isLoggedIn);
     return trainerUser ? trainerUser.username.split('_')[0] : null;
   });
-  return  (
-    <div>
-      <div className="container student-log-in-home-heading">
+
+  return (
+    <div style={{margin: '0'}}>
+      <div className="container-fluid student-log-in-home-heading">
         <div className="row justify-content-center">
           <div className="col-md-4">
-            <div className="mt-5 ">
+            <div className="mt-5">
               <h1 className='student-log-in-home-heading'>Hi, {firstName}! </h1>
               <p>Welcome Learn Platform - where every day is a day to learn. Dive into the vast ocean of knowledge and empower yourself with the tools for a successful tomorrow. Happy learning!</p>
             </div>
@@ -31,7 +32,7 @@ const TrainerLogInHome = () => {
           <img src={StudentLogInHome1} alt="1" className="img-fluid" />
           <div>
             <h3>Do consequr</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur . </p>
           </div>
         </div>
         <div className="col-md-4 mb-5 text-center">
@@ -45,7 +46,7 @@ const TrainerLogInHome = () => {
           <img src={StudentLogInHome3} alt="3" className="img-fluid" />
           <div>
             <h3>Laboris nulla </h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+            <p>Duis aute irure dolor in reprehenderit </p>
           </div>
         </div>
       </div>
@@ -54,7 +55,6 @@ const TrainerLogInHome = () => {
           <button className="btn btn-primary mb-5 mt-5" type="submit">Read more articles</button>
         </div>
       </div>
-      
     </div>
   );
 }

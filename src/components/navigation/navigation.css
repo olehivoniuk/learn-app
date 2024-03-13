@@ -10,13 +10,11 @@
     margin-top: 0; 
     margin-bottom: 140px;
     margin-left: 0;
-    margin-right: 0;
 }
 
 .nav-item {
     text-decoration: none;
     color: inherit;
-    margin-right: 10px;
 }
 .list-logged-in-links{
     position: relative;
