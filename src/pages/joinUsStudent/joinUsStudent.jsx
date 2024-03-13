@@ -35,7 +35,9 @@ const JoinUsStudent = () => {
     dispatch(
       addFormData({
         id: Date.now(), // Generate unique ID
-        username: `${formData.firstName}_${formData.lastName.slice(0,1)}`,
+        username: `${formData.firstName}_${formData.lastName.slice(0,1)}_st`,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
         email: formData.email,
         role: 'student',
         dob: formData.dob,

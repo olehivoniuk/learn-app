@@ -9,7 +9,9 @@ import './box.css';
 const Box = ({ isLoggedIn, userEmail }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
-  const role = useSelector(state => state.userData.find(user => user.isLoggedIn)?.role);
+  const userData = useSelector(state => state.userData);
+  const role = userData.find(user => user.isLoggedIn)?.role;
+  const userName = userData.find(user => user.isLoggedIn)?.username;
 
   const toggleProfile = () => {
     setIsOpen(!isOpen);
@@ -21,14 +23,15 @@ const Box = ({ isLoggedIn, userEmail }) => {
   
 
   const renderProfile = () => {
+    
     if (isLoggedIn) {
       let profileName, profileImage, accountLink;
       if (role === 'student') {
-        profileName = 'Student';
+        profileName = userName;
         profileImage = AvatarStudent;
         accountLink = '/my-account-student';
       } else if (role === 'trainer') {
-        profileName = 'Trainer';
+        profileName = userName;
         profileImage = AvatarTrainer;
         accountLink = '/my-account-trainer-profile';
       }
@@ -38,7 +41,7 @@ const Box = ({ isLoggedIn, userEmail }) => {
           <div className="profile-icon" onClick={toggleProfile}>
             <i className="fas fa-user">
               <div className="profile-info">
-              <div>{profileName} Name</div>
+              <div>{profileName}</div>
               <img src={profileImage} alt="user" style={{ maxWidth: '6vh', borderRadius: "50px"}}  />
               </div>
             </i>
