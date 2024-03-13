@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import AvatarTrainer from '../../../images/AvatarTrainer.png';
 
 const MyAccountTrainerProfile = () => {
+  const trainerUser = useSelector(state => state.userData.find(user => user.role === 'trainer' && user.isLoggedIn));
+
+const firstName = trainerUser ? trainerUser.firstName : null;
+const lastName = trainerUser ? trainerUser.lastName : null;
+const specialization = trainerUser ? trainerUser.specialization : null;
+const userName = trainerUser ? trainerUser.username : null;
+
    
     return (
       <div className="container mt-5">
@@ -14,19 +22,19 @@ const MyAccountTrainerProfile = () => {
             </div>
             <div className="mb-3">
               <label className="fw-bold">First Name:</label>
-              <p>John</p>
+              <p>{firstName}</p>
             </div>
             <div className="mb-3">
               <label className="fw-bold">Last Name:</label>
-              <p>Doe</p>
+              <p>{lastName}</p>
             </div>
             <div className="mb-3">
               <label className="fw-bold">User Name:</label>
-              <p>johndoe123</p>
+              <p>{userName}</p>
             </div>
             <div className="mb-3">
               <label className="fw-bold">Specialization:</label>
-              <p>JavaScript</p>
+              <p>{specialization}</p>
             </div>
             <div className="mb-3">
               <label className="fw-bold">Address:</label>

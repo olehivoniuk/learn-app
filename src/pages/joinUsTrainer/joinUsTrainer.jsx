@@ -127,21 +127,22 @@ const JoinUsTrainer = () => {
                 Specialization
               </label>
               <select
-                id="inputSpecialization"
-                className="form-select"
-                aria-label="Default select example"
-                name="specialization"
-                value={formData.specialization}
-                onChange={handleChange}
-                required
-              >
-                <option defaultValue disabled>
-                  Please select
-                </option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+                  id="inputSpecialization"
+                  className="form-select"
+                  aria-label="Default select example"
+                  name="specialization"
+                  value={formData.specialization}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>
+                    Please select
+                  </option>
+                  <option value="Java">Java</option>
+                  <option value="PHP">PHP</option>
+                  <option value="SP1">SP1</option>
+                  <option value="SP2">SP2</option>
+                </select>                
             </div>
             <button type="submit" className="btn btn-primary w-100 custom-margin-top">
               Submit
