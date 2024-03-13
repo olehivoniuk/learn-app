@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import AvatarStudent from '../../../images/AvatarStudent.png';
 import Modal from '@mui/material/Modal';
@@ -16,6 +17,16 @@ const MyAccountStudent = () => {
     setModalOpen(false);
   };
 
+  const studentrUser = useSelector(state => state.userData.find(user => user.role === 'student' && user.isLoggedIn));
+
+  const firstName = studentrUser ? studentrUser.firstName : null;
+  const lastName = studentrUser ? studentrUser.lastName : null;
+  const dob = studentrUser ? studentrUser.dob : null;
+  const userName = studentrUser ? studentrUser.username : null;
+  const address = studentrUser ? studentrUser.address : null;
+  const email = studentrUser ? studentrUser.email : null;
+
+
   return (
     <div className="container mt-5">
       <h1 className='my-account-heading '>My Account</h1>
@@ -27,23 +38,27 @@ const MyAccountStudent = () => {
           </div>
           <div className="mb-3">
             <label>First Name:</label>
-            <p>John</p>
+            <p>{firstName}</p>
           </div>
           <div className="mb-3">
             <label>Last Name:</label>
-            <p>Doe</p>
+            <p>{lastName}</p>
           </div>
           <div className="mb-3">
             <label>User Name:</label>
-            <p>johndoe123</p>
+            <p>{userName}</p>
+          </div>
+          <div className="mb-3">
+            <label>Date of birth:</label>
+            <p>{dob}</p>
           </div>
           <div className="mb-3">
             <label>Address:</label>
-            <p>123 Street, City, Country</p>
+            <p>{address}</p>
           </div>
           <div className="mb-3">
             <label>Email:</label>
-            <p>johndoe@example.com</p>
+            <p>{email}</p>
           </div>
           <div className="d-flex justify-content-start mb-3">
           <Link to="/edit-my-student-account" className="btn btn-primary me-3">Edit Profile</Link>

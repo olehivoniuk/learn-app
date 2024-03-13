@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [
-  { id: 1, username: 'stud1', password: 'pass1', role: 'student', isLoggedIn: false },
-  { id: 2, username: 'stud2', password: 'pass2', role: 'student', isLoggedIn: false },
-  { id: 3, username: 'trainer1', password: 'password1', role: 'trainer', isLoggedIn: false },
-  { id: 4, username: 'trainer2', password: 'password2', role: 'trainer', isLoggedIn: false },
-  { id: 5, username: 'train', password: 'pass3', role: 'trainer', isLoggedIn: false },
+  { id: 1, username: 'stud1',firstName: "Ivan", lastName: "Ivanov",  password: 'pass1', role: 'student', isLoggedIn: false },
+  { id: 2, username: 'stud2',firstName: "Petro", lastName: "Petrov", password: 'pass2', role: 'student', isLoggedIn: false },
+  { id: 3, username: 'Vasyl_tr1',firstName: "Vasil", lastName: "Vasiliuk",  specialization: "Python", password: 'password1', role: 'trainer', isLoggedIn: false },
+  { id: 4, username: 'Borys_tr2',firstName: "Borys", lastName: "Borysov",specialization: "Java", password: 'password2', role: 'trainer', isLoggedIn: false },
+  
 ];
 
 const userDataSlice = createSlice({
