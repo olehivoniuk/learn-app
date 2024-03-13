@@ -1,17 +1,21 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
 import StudentLogInHome1 from "../../images/StudentLogInHome1.png";
 import StudentLogInHome2 from "../../images/StudentLogInHome2.png";
 import StudentLogInHome3 from "../../images/StudentLogInHome3.png";
 import './trainerLogInHome.css'
 
 const TrainerLogInHome = () => {
+  const firstName = useSelector(state => {
+    const trainerUser = state.userData.find(user => user.role === 'trainer' && user.isLoggedIn);
+    return trainerUser ? trainerUser.username.split(' ')[0] : null;
+  });
   return  (
     <div>
       <div className="container student-log-in-home-heading">
         <div className="row justify-content-center">
           <div className="col-md-4">
             <div className="mt-5 ">
-              <h1 className='student-log-in-home-heading'>Hi, John! </h1>
+              <h1 className='student-log-in-home-heading'>Hi, {firstName}! </h1>
               <p>Welcome Learn Platform - where every day is a day to learn. Dive into the vast ocean of knowledge and empower yourself with the tools for a successful tomorrow. Happy learning!</p>
             </div>
             <div className="mt-6">
@@ -55,7 +59,4 @@ const TrainerLogInHome = () => {
   );
 }
 
-export default TrainerLogInHome; 
-
-
-
+export default TrainerLogInHome;
