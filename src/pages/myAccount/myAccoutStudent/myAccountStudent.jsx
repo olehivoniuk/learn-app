@@ -27,7 +27,7 @@ const MyAccountStudent = () => {
   const handleDeleteProfile = () => {
     dispatch(signOut()); // Log the user out
     dispatch(deleteUser(studentUser.id)); // Delete the user's profile
-    navigate('/'); // Redirect to the main page using the navigate function
+    navigate('/login'); // Redirect to the main page using the navigate function
   };
 
   return (
