@@ -20,6 +20,7 @@ const EditMyStudentAccount = () => {
 
   // Retrieve student data from Redux state
   const studentData = useSelector(state => state.userData.find(user => user.role === 'student' && user.isLoggedIn));
+  console.log(studentData)
 
   // Destructure student data
   const { firstName, lastName, username, dob, address, email } = studentData || {};
@@ -39,7 +40,6 @@ const EditMyStudentAccount = () => {
       alert('Username must not exceed 8 characters.');
       return; // Stop the submission
     }
-    console.log('Updated data:', updatedData);
     dispatch(updateUser({ userId: studentData.id, updatedData })); // Dispatch updateUser with userId and updatedData
   };
 
