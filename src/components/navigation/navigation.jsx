@@ -19,7 +19,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className='nav-container w-100'>
+    <div className='nav-container '>
       <nav className="nav navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link to='/' className="navbar-brand">

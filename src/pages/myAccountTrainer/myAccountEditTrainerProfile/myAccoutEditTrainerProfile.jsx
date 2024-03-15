@@ -92,16 +92,16 @@ const MyAccoutEditTrainerProfile = () => {
                     </div>
                 </div>
                 <div className="col-md-6">
-    <div>
-        <h3 className='m-5'>My specialization</h3>
-        <select className="form-select w-25 m-5 bg-white" aria-label="Default select example" defaultValue={trainerUser?.specialization}>
-            <option value="Java">Java</option>
-            <option value="PHP">PHP</option>
-            <option value="SP1">SP1</option>
-            <option value="SP2">SP2</option>
-        </select>
-    </div>
-</div>          
+                    <div>
+                        <h3 className='m-5'>My specialization</h3>
+                        <select className="form-select w-25 m-5 bg-white" aria-label="Default select example" defaultValue={trainerUser?.specialization}>
+                            <option value="Java">Java</option>
+                            <option value="PHP">PHP</option>
+                            <option value="SP1">SP1</option>
+                            <option value="SP2">SP2</option>
+                        </select>
+                    </div>
+                 </div>          
             </div>
             <Modal
                 open={modalOpen}
