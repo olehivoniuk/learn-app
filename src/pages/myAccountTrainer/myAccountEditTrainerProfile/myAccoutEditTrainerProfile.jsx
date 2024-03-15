@@ -2,9 +2,15 @@ import { useState } from 'react';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import AvatarTrainer from '../../../images/AvatarTrainer.png'
+import { useSelector, useDispatch } from 'react-redux';
+import { updateUser } from '../../../redux/userData'; // Import updateUser action
+import './myAccountEditTrainerProfile.css';
+
 
 const MyAccoutEditTrainerProfile = () => {
+    const dispatch = useDispatch();
     const [modalOpen, setModalOpen] = useState(false);
+    const trainerUser = useSelector(state => state.userData.find(user => user.role === 'trainer' && user.isLoggedIn));
 
     const handleOpen = () => {
         setModalOpen(true);
@@ -13,6 +19,20 @@ const MyAccoutEditTrainerProfile = () => {
     const handleClose = () => {
         setModalOpen(false);
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const updatedData = {
+          firstName: e.target.elements.inputFirstName.value,
+          lastName: e.target.elements.inputLastName.value,
+          username: e.target.elements.inputUsername.value,
+          email: e.target.elements.inputEmail.value,
+          active: e.target.elements.active.checked,
+          specialization: e.target.elements.specialization.value,
+        };
+        console.log('Updated data:', updatedData);
+        dispatch(updateUser({ userId: trainerUser.id, updatedData })); // Dispatch updateUser with userId and updatedData
+      };
 
     return (
         <div className='container-edit-my-student-account '>
@@ -43,37 +63,38 @@ const MyAccoutEditTrainerProfile = () => {
                         </div>
                     </div>
                     <div>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="mb-3">
                                 <label htmlFor="inputFirstName" className="form-label">First name</label>
-                                <input type="text" className="form-control" id="inputFirstName" aria-describedby="firstNameHelp" placeholder='Text...' required />
+                                <input type="text" className="form-control" id="inputFirstName" aria-describedby="firstNameHelp"  defaultValue={trainerUser?.firstName} required />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="inputLastName" className="form-label">Last name</label>
-                                <input type="text" className="form-control" id="inputLastName" aria-describedby="lastNameHelp" placeholder='Input text' required />
+                                <input type="text" className="form-control" id="inputLastName" aria-describedby="lastNameHelp"  defaultValue={trainerUser?.lastName} required />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="inputEmail" className="form-label">User name</label>
-                                <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder='Input text' required />
+                                <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" defaultValue={trainerUser?.username} required />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="inputEmail" className="form-label">Email</label>
-                                <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder='Input text' required />
+                                <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" defaultValue={trainerUser?.email} required />
                             </div>
-                            <div class="d-flex align-items-center">
-                            <label class="form-check-label me-2" for="flexSwitchCheckChecked">Active</label>
-                            <div class="form-check form-switch">                          
-                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <div >
+                               <div className="d-flex align-items-center">
+                                  <label className="form-check-label me-2" htmlFor="flexSwitchCheckChecked">Active</label>
+                              <div className="form-check form-switch">
+                                <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" defaultChecked />
+                              </div>
                             </div>
                           </div>
-
                         </form>
                     </div>
                 </div>
                 <div className="col-md-6">
                     <div>
                         <h3 className='m-5'>My specialization</h3>
-                        <select className="form-select w-25 m-5 bg-white" aria-label="Default select example">
+                        <select className="form-select w-25 m-5 bg-white" aria-label="Default select example" defaultValue={trainerUser?.specialization}>
                             <option selected>Dropdown</option>
                             <option value="1" style={{ width: '25%' }}>Java</option>
                             <option value="2" style={{ width: '25%' }}>PHP</option>
