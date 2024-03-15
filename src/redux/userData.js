@@ -5,7 +5,6 @@ const initialState = [
   { id: 2, username: 'Petro_st2', firstName: "Petro", lastName: "Petrov", password: 'pass2', role: 'student', isLoggedIn: false, dob: '11.10.1990', address: "Lviv", email: "Petro@gmail.com" },
   { id: 3, username: 'Vasyl_tr1', firstName: "Vasil", lastName: "Vasiliuk", specialization: "Python", password: 'password1', role: 'trainer', isLoggedIn: false },
   { id: 4, username: 'Borys_tr2', firstName: "Borys", lastName: "Borysov", specialization: "Java", password: 'password2', role: 'trainer', isLoggedIn: false },
-  
 ];
 
 const userDataSlice = createSlice({
@@ -37,9 +36,16 @@ const userDataSlice = createSlice({
       const userIdToDelete = action.payload;
       return state.filter(user => user.id !== userIdToDelete);
     },
+    // Add updateUser action to the reducers
+    updateUser: (state, action) => {
+      const { userId, updatedData } = action.payload;
+      return state.map(user =>
+        user.id === userId ? { ...user, ...updatedData } : user
+      );
+    },
   },
 });
 
-export const { addFormData, signOut, changeUserPassword, addUser, updateUserInfo, deleteUser } = userDataSlice.actions;
+export const { addFormData, signOut, changeUserPassword, addUser, updateUserInfo, deleteUser, updateUser } = userDataSlice.actions;
 
 export default userDataSlice.reducer;
