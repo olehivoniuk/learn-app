@@ -3,8 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = [
   { id: 1, username: 'Ivan_st1', firstName: "Ivan", lastName: "Ivanov", password: 'pass1', role: 'student', isLoggedIn: false, dob: '12.11.1997', address: "Kyiv", email: "ivan@gmail.com" },
   { id: 2, username: 'Petro_st2', firstName: "Petro", lastName: "Petrov", password: 'pass2', role: 'student', isLoggedIn: false, dob: '11.10.1990', address: "Lviv", email: "Petro@gmail.com" },
-  { id: 3, username: 'Vasyl_tr1', firstName: "Vasil", lastName: "Vasiliuk", specialization: "Python", password: 'password1', role: 'trainer', isLoggedIn: false },
-  { id: 4, username: 'Borys_tr2', firstName: "Borys", lastName: "Borysov", specialization: "Java", password: 'password2', role: 'trainer', isLoggedIn: false, email: "boar@gmail.com", active: false },
+  { id: 3, username: 'Vasyl_tr1', firstName: "Vasil", lastName: "Vasiliuk", password: 'password1', role: 'trainer', isLoggedIn: false, email: "vas@gmail.com", active: false, specialization: [ "PHP"] },
+  { id: 4, username: 'Borys_tr2', firstName: "Borys", lastName: "Borysov", password: 'password2', role: 'trainer', isLoggedIn: false, email: "boar@gmail.com", active: false, specialization: ["Java"] },
+
 ];
 
 const userDataSlice = createSlice({

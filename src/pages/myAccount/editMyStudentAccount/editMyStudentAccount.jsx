@@ -101,7 +101,7 @@ const EditMyStudentAccount = () => {
                 <div className="d-flex align-items-center">
                   <label className="form-check-label me-2" htmlFor="flexSwitchCheckChecked">Active</label>
                   <div className="form-check form-switch">
-                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" defaultChecked />
+                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked"  />
                   </div>
                 </div>
               </div>
