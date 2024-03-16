@@ -23,16 +23,16 @@ const MyAccoutEditTrainerProfile = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const updatedData = {
-          firstName: e.target.elements.inputFirstName.value,
-          lastName: e.target.elements.inputLastName.value,
-          username: e.target.elements.inputUsername.value,
-          email: e.target.elements.inputEmail.value,
-          active: e.target.elements.active.checked,
-          specialization: e.target.elements.specialization.value,
+            firstName: e.target.elements.firstName.value,
+            lastName: e.target.elements.lastName.value,
+            username: e.target.elements.username.value,
+            email: e.target.elements.email.value,
+            active: e.target.elements.active.checked,
+            specialization: e.target.elements.specialization.value,
         };
         console.log('Updated data:', updatedData);
-        dispatch(updateUser({ userId: trainerUser.id, updatedData })); // Dispatch updateUser with userId and updatedData
-      };
+        dispatch(updateUser({ userId: trainerUser.id, updatedData }));
+    };
 
     return (
         <div className='container-edit-my-student-account '>
@@ -63,32 +63,41 @@ const MyAccoutEditTrainerProfile = () => {
                         </div>
                     </div>
                     <div>
-                        <form onSubmit={handleSubmit}>
-                            <div className="mb-3">
-                                <label htmlFor="inputFirstName" className="form-label">First name</label>
-                                <input type="text" className="form-control" id="inputFirstName" aria-describedby="firstNameHelp"  defaultValue={trainerUser?.firstName} required />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="inputLastName" className="form-label">Last name</label>
-                                <input type="text" className="form-control" id="inputLastName" aria-describedby="lastNameHelp"  defaultValue={trainerUser?.lastName} required />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="inputEmail" className="form-label">User name</label>
-                                <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" defaultValue={trainerUser?.username} required />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="inputEmail" className="form-label">Email</label>
-                                <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" defaultValue={trainerUser?.email} required />
-                            </div>
-                            <div >
-                               <div className="d-flex align-items-center">
-                                  <label className="form-check-label me-2" htmlFor="flexSwitchCheckChecked">Active</label>
-                              <div className="form-check form-switch">
-                                <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked"  />
-                              </div>
-                            </div>
+                    <form onSubmit={handleSubmit}>
+                          <div className="mb-3">
+                              <label htmlFor="firstName" className="form-label">First name</label>
+                              <input type="text" className="form-control" id="firstName" defaultValue={trainerUser?.firstName} required />
                           </div>
-                        </form>
+                          <div className="mb-3">
+                              <label htmlFor="lastName" className="form-label">Last name</label>
+                              <input type="text" className="form-control" id="lastName" defaultValue={trainerUser?.lastName} required />
+                          </div>
+                          <div className="mb-3">
+                              <label htmlFor="username" className="form-label">User name</label>
+                              <input type="text" className="form-control" id="username" defaultValue={trainerUser?.username} required />
+                          </div>
+                          <div className="mb-3">
+                              <label htmlFor="email" className="form-label">Email</label>
+                              <input type="email" className="form-control" id="email" defaultValue={trainerUser?.email} required />
+                          </div>
+                          <div className="mb-3 form-check form-switch">
+                              <input className="form-check-input" type="checkbox" id="active" defaultChecked={trainerUser?.active} />
+                              <label className="form-check-label" htmlFor="active">Active</label>
+                          </div>
+                          <div className="mb-3">
+                              <label htmlFor="specialization" className="form-label">Specialization</label>
+                              <select className="form-select" id="specialization" defaultValue={trainerUser?.specialization}>
+                                  <option value="Java">Java</option>
+                                  <option value="PHP">PHP</option>
+                                  <option value="SP1">SP1</option>
+                                  <option value="SP2">SP2</option>
+                              </select>
+                          </div>
+                          <div className='text-center'>
+                              <button type="button" className="btn btn-secondary m-3">Cancel</button>
+                              <button type="submit" className="btn btn-primary m-3">Save changes</button>
+                          </div>
+                      </form>                      
                     </div>
                 </div>
                 <div className="col-md-6">
@@ -131,10 +140,7 @@ const MyAccoutEditTrainerProfile = () => {
                     </div>
                 </div>
             </Modal>
-            <div className='text-center'>
-            <button type="button" className="btn btn-secondary m-3  ">Cancel</button>
-            <button type="submit" className="btn btn-primary m-3 ">Save changes</button>
-        </div>
+            
     </div>
     );
 }

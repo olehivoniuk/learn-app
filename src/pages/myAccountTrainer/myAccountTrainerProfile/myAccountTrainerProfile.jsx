@@ -5,7 +5,7 @@ import AvatarTrainer from '../../../images/AvatarTrainer.png';
 const MyAccountTrainerProfile = () => {
   const trainerUser = useSelector(state => state.userData.find(user => user.role === 'trainer' && user.isLoggedIn));
 
-  const { firstName, lastName, specialization, username } = trainerUser || {};
+  const { firstName, lastName, specialization, username, email } = trainerUser || {};
 
   return (
     <div className="container mt-5">
@@ -38,7 +38,7 @@ const MyAccountTrainerProfile = () => {
           </div>
           <div className="mb-3">
             <label className="fw-bold">Email:</label>
-            <p>johndoe@example.com</p>
+            <p>{email}</p>
           </div>
           <div className="d-flex justify-content-start mb-3">
             <Link to="/my-account-edit-trainer-profile" className="btn btn-primary me-3">Edit Profile</Link>
