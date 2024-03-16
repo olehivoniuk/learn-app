@@ -84,7 +84,7 @@ const MyAccoutEditTrainerProfile = () => {
                               <input className="form-check-input" type="checkbox" id="active" defaultChecked={trainerUser?.active} />
                               <label className="form-check-label" htmlFor="active">Active</label>
                           </div>
-                          <div className="mb-3">
+                          <div className="mb-3 w-50 my-specialization">
                               <label htmlFor="specialization" className="form-label">Specialization</label>
                               <select className="form-select" id="specialization" defaultValue={trainerUser?.specialization}>
                                   <option value="Java">Java</option>
@@ -103,12 +103,6 @@ const MyAccoutEditTrainerProfile = () => {
                 <div className="col-md-6">
                     <div>
                         <h3 className='m-5'>My specialization</h3>
-                        <select className="form-select w-25 m-5 bg-white" aria-label="Default select example" defaultValue={trainerUser?.specialization}>
-                            <option value="Java">Java</option>
-                            <option value="PHP">PHP</option>
-                            <option value="SP1">SP1</option>
-                            <option value="SP2">SP2</option>
-                        </select>
                     </div>
                  </div>          
             </div>
