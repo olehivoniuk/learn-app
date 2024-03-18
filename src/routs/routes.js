@@ -1,5 +1,6 @@
 
 
+import React from 'react';
 import LoginForm from '../components/loginForm/loginForm';
 import Home from '../pages/homePage/home';
 import JoinUs from '../pages/joinUs/joinUs';

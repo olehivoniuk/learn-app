@@ -1,3 +1,4 @@
+import React from 'react';
 import Blog1 from '../../images/Blog1.png'
 import Blog2 from '../../images/Blog2.png'
 import Blog3 from '../../images/Blog3.png'

@@ -1,3 +1,4 @@
+import React from 'react';
 import './datePickerComponent.css';
 import { useState } from 'react';
 import { DatePicker } from '@gsebdev/react-simple-datepicker';

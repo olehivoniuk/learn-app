@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import StudentLogInHome1 from "../../images/StudentLogInHome1.png";
 import StudentLogInHome2 from "../../images/StudentLogInHome2.png";

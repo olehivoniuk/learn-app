@@ -1,3 +1,4 @@
+import React from 'react';
 import TeamCherrydeck from '../../images/TeamCherrydeck.png'
 import John from '../../images/John.png'
 import Sarah from '../../images/Sarah.png'

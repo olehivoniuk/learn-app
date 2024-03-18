@@ -1,3 +1,4 @@
+import React from 'react';
 import Group1 from '../../images/Group1.jpg';
 import Facebook from '../../images/Facebook.svg'
 import Youtube from '../../images/Youtube.svg'

@@ -1,6 +1,6 @@
+import React from 'react';
 import Rectangle1 from '../../images/Rectangle1.png'
 import JoinUsBox from '../../components/joinUsBox/joinUsBox'
-
 import './homePage.css'
 
 

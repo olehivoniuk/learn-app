@@ -1,3 +1,4 @@
+import React from 'react';
 import JoinUsButton from '../joinUsButton/joinUsButton'
 import './joinUsBox.css'
 const JoinUsBox = () => {

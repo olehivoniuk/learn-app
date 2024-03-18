@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Trainer from '../../images/Trainer.png'
 import Student from '../../images/Student.png'

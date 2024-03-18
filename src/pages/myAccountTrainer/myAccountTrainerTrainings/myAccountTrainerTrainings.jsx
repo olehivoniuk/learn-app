@@ -1,5 +1,5 @@
 
-
+import React from 'react';
 import './myAccountTrainerTrainings.css'
 import DatePickerComponent from '../../../components/datePicker/datePickerComponent';
 
