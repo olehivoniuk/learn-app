@@ -9,8 +9,12 @@ const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false); // Add loading state
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+
+  
 
   useEffect(() => {
     setErrorMessage('');
@@ -20,28 +24,27 @@ const LoginForm = () => {
     event.preventDefault();
     if (username && password) {
       try {
-        const response = await axios.post('http://localhost:3001/login', { // Update the URL here
-          username,
-          password,
-        });
+        setLoading(true); // Set loading to true while fetching data
+        const response = await axios.get(`http://localhost:3001/users?username=${username}&password=${password}`);
         const user = response.data;
-  
-        // Check if the user data contains isLoggedIn:true
+        console.log(user);
+        user.isLoggedIn = true; 
         if (user.isLoggedIn) {
-          // Update the user's isLoggedIn status in Redux state
-          dispatch(addFormData({ ...user, isLoggedIn: true }));
-          // Redirect the user based on their role
+          dispatch(addFormData(user));
           navigate(user.role === 'student' ? '/student-login-home' : '/trainer-login-home');
         } else {
           setErrorMessage('Incorrect username or password');
         }
       } catch (error) {
         setErrorMessage('Failed to login');
+      } finally {
+        setLoading(false); // Set loading back to false after fetching data
       }
     } else {
       setErrorMessage('Please enter username and password');
     }
   };
+
 
   return (
     <div className="d-flex justify-content-center align-items-center h-100">

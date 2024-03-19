@@ -13,7 +13,7 @@ import JoinUsStudent from '../pages/joinUsStudent/joinUsStudent';
 import StudentLogInHome from '../pages/studentLogInHome/studentLogInHome';
 import MyAccountStudent from '../pages/myAccount/myAccoutStudent/myAccountStudent';
 import AddAccountStudentAddTrainer from '../pages/myAccount/myAccountStudentAddTrainer/addAccountStudentAddTrainer';
-import AddTodoForm from '../addToDo/AddTodoForm';
+// import AddTodoForm from '../addToDo/AddTodoForm';
 import EditMyStudentAccount from '../pages/myAccount/editMyStudentAccount/editMyStudentAccount';
 import StudentTraining from '../pages/training/studentTrainings/studentTraining';
 import AddTraining from '../pages/training/addTrainings/addTraining';
@@ -39,7 +39,7 @@ const routes = [
   { path: "/student-login-home", Element: <StudentLogInHome /> },
   { path: "/my-account-student", Element: <MyAccountStudent /> },
   { path: "/add-account-student-add-trainer", Element: <AddAccountStudentAddTrainer /> },
-  { path: "/add-todo", Element: <AddTodoForm /> },
+  // { path: "/add-todo", Element: <AddTodoForm /> },
   { path: "/edit-my-student-account", Element: <EditMyStudentAccount /> },
   { path: "/student-training", Element: <StudentTraining /> },
   { path: "/add-training", Element: <AddTraining /> },
