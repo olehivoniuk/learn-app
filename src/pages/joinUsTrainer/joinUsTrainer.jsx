@@ -8,7 +8,7 @@ import './joinUsTrainer.css';
 
 const JoinUsTrainer = () => {
   const dispatch = useDispatch(); // Initialize useDispatch hook
-  const navigate = useNavigate(); // Initialize useNavigate hook
+const navigate = useNavigate(); // Initialize useNavigate hook
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Import Axios
 import { addFormData } from '../../redux/userData';
 import './loginForm.css';
 
@@ -10,28 +11,36 @@ const LoginForm = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const userData = useSelector(state => state.userData);
 
   useEffect(() => {
     setErrorMessage('');
   }, [username, password]);
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
     if (username && password) {
-      const user = userData.find(user => user.username === username && user.password === password);
-      if (user) {
-        // Update the user's isLoggedIn status to true
-        dispatch(addFormData({ ...user, isLoggedIn: true }));
-        // Redirect the user based on their role
-        navigate(user.role === 'student' ? '/student-login-home' : '/trainer-login-home');
-      } else {
-        setErrorMessage('Incorrect username or password');
+      try {
+        const response = await axios.post('http://localhost:3001/login', { // Update the URL here
+          username,
+          password,
+        });
+        const user = response.data;
+  
+        // Check if the user data contains isLoggedIn:true
+        if (user.isLoggedIn) {
+          // Update the user's isLoggedIn status in Redux state
+          dispatch(addFormData({ ...user, isLoggedIn: true }));
+          // Redirect the user based on their role
+          navigate(user.role === 'student' ? '/student-login-home' : '/trainer-login-home');
+        } else {
+          setErrorMessage('Incorrect username or password');
+        }
+      } catch (error) {
+        setErrorMessage('Failed to login');
       }
     } else {
       setErrorMessage('Please enter username and password');
     }
-    // setSubmitClicked(true); // Set submitClicked to true when the form is submitted
   };
 
   return (
