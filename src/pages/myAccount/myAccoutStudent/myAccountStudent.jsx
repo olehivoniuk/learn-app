@@ -129,8 +129,8 @@ const MyAccountStudent = () => {
         <div style={{ backgroundColor: 'white', padding: '5%', width: '80%', maxWidth: '70vh', maxHeight: '70vh' }}>
           <h2 id="delete-modal-title" style={{ fontSize: '2em', marginBottom: '2vh' }}>Profile deletion confirmation</h2>
           <p id="delete-modal-description">We are truly sorry to see you go. Before you proceed with deleting your profile, we want you to know that this action is permanent and irreversible. You will lose access to all your account information, course progress certificates, and any learning communities you are part of.</p>
-          <p id="delete-modal-description">If there is anything we can do to improve your experience or if you need assistance with any issues you've encountered, please reach our support team. We are always here to help.</p>
-          <p id="delete-modal-description">If you still wish to delete your account, please click on the "Confirm" button below.</p>
+          <p id="delete-modal-description">If there is anything we can do to improve your experience or if you need assistance with any issues you&apos;ve encountered, please reach our support team. We are always here to help.</p>
+          <p id="delete-modal-description">If you still wish to delete your account, please click on the &apos;Confirm&apos; button below.</p>
 
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '3vh' }}>
             <button style={{ marginRight: '2%', padding: '1% 2%', minWidth: '80px' }} onClick={handleClose}>Cancel</button>

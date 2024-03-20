@@ -13,9 +13,6 @@ const LoginForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
-  
-
   useEffect(() => {
     setErrorMessage('');
   }, [username, password]);
@@ -32,6 +29,7 @@ const LoginForm = () => {
         if (user.isLoggedIn) {
           dispatch(addFormData(user));
           navigate(user.role === 'student' ? '/student-login-home' : '/trainer-login-home');
+          console.log(user.isLoggedIn);
         } else {
           setErrorMessage('Incorrect username or password');
         }
@@ -44,7 +42,6 @@ const LoginForm = () => {
       setErrorMessage('Please enter username and password');
     }
   };
-
 
   return (
     <div className="d-flex justify-content-center align-items-center h-100">
@@ -78,11 +75,11 @@ const LoginForm = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary btn-block">
-          Sign in
+        <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
+          {loading ? 'Signing in...' : 'Sign in'}
         </button>
         <p className="text-center">
-          Don't have an account? <Link to="/join-us">Sign up</Link>
+          Don&apos;t have an account? <Link to="/join-us">Sign up</Link>
         </p>
         <div className="form-check text-center">
           <input

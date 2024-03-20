@@ -9,12 +9,13 @@ const AboutUs = () => {
   return (
     <div>
       <h1 className='about-us-heading'>About us</h1>
-      <p className='about-description'>
-        Welcome to the 'About us' section of Learn Platform, where we aim to
-        provide you with a deeper understanding of our philosophy, values, and
-        mission. Established in 2023, Learn platform was born out of a passion
-        for learning and a belief in the power of knowledge to transform lives.
-      </p>
+      <p className="about-description">
+         Welcome to the &apos;About us&apos; section of Learn Platform, where we aim to
+         provide you with a deeper understanding of our philosophy, values, and
+         mission. Established in 2023, Learn platform was born out of a passion
+         for learning and a belief in the power of knowledge to transform lives.
+       </p>
+       
       <div className="container">
         <div className="image-container">
           <img src={TeamCherrydeck} alt="Team Cherrydeck" className='team-cherry-deck' />

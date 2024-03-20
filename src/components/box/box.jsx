@@ -4,6 +4,7 @@ import AvatarStudent from '../../images/AvatarStudent.png';
 import AvatarTrainer from '../../images/AvatarTrainer.png';
 import { Link } from 'react-router-dom';
 import { signOut } from '../../redux/userData';
+import PropTypes from 'prop-types'; // Import PropTypes
 import './box.css';
 
 const Box = ({ userEmail }) => {
@@ -53,6 +54,11 @@ const Box = ({ userEmail }) => {
       )}
     </div>
   );
+};
+
+// PropTypes validation for userEmail prop
+Box.propTypes = {
+  userEmail: PropTypes.string.isRequired,
 };
 
 export default Box;
