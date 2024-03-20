@@ -23,10 +23,11 @@ const LoginForm = () => {
       try {
         setLoading(true); // Set loading to true while fetching data
         const response = await axios.get(`http://localhost:3001/users?username=${username}&password=${password}`);
-        const user = response.data;
-        console.log(user);
-        user.isLoggedIn = true; 
-        if (user.isLoggedIn) {
+        const users = response.data;
+        console.log(users)
+        if (users.length > 0) {
+          const user = users[0]; // Assuming only one user should match the credentials
+          user.isLoggedIn = true; 
           dispatch(addFormData(user));
           navigate(user.role === 'student' ? '/student-login-home' : '/trainer-login-home');
           console.log(user.isLoggedIn);
@@ -42,6 +43,7 @@ const LoginForm = () => {
       setErrorMessage('Please enter username and password');
     }
   };
+  
 
   return (
     <div className="d-flex justify-content-center align-items-center h-100">
