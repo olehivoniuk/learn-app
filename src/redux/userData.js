@@ -1,11 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [
-<<<<<<< HEAD
-  
-=======
->>>>>>> 9153bbc...  moved user's intitial users credentials from the intitial state to the server
-];
+const initialState = [];
 
 const userDataSlice = createSlice({
   name: 'userData',
