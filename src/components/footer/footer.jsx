@@ -1,8 +1,8 @@
 import React from 'react';
 import Group1 from '../../images/Group1.jpg';
-import Facebook from '../../images/Facebook.svg'
-import Youtube from '../../images/Youtube.svg'
-import Twitter from '../../images/Twitter.svg'
+import Facebook from '../../images/facebook.svg';
+import Youtube from '../../images/youtube.svg';
+import Twitter from '../../images/twitter.svg'
 import './footer.css';
 
 const Footer = () => {
